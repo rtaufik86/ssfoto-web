@@ -145,7 +145,7 @@ export default function ReviewSection() {
                   <div className="flex-grow bg-gray-200 rounded-full h-2.5">
                     <div
                       className="bg-yellow-400 h-2.5 rounded-full"
-                      style={{ width: `${ratingDistribution[star]}%` }}
+                      style={{ width: `${ratingDistribution[star as keyof typeof ratingDistribution]}%` }}
                     ></div>
                   </div>
                   <span className="text-sm text-gray-600 w-8 text-right">

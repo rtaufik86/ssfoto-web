@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply antialiased;
+    cursor: none; /* Hide default cursor for custom cursor */
+  }
+}
+
+/* Show cursor on input fields for usability */
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
+/* src/app/globals.css */
+/* ... kode CSS lainnya ... */
+
+/* Wajib untuk Custom Cursor */
+body {
+  cursor: none; 
+}

@@ -54,7 +54,7 @@ const checkRateLimitMemory = (identifier: string): RateLimitResult => {
   if (!record || now > record.resetTime) {
     const resetTime = now + RATE_LIMIT_CONFIG.windowMs;
     memoryStore.set(identifier, { count: 1, resetTime });
-    
+
     return {
       success: true,
       limit: RATE_LIMIT_CONFIG.maxRequests,
@@ -140,7 +140,7 @@ export const checkRateLimit = async (
  */
 export const cleanupMemoryStore = () => {
   const now = Date.now();
-  for (const [key, value] of memoryStore.entries()) {
+  for (const [key, value] of Array.from(memoryStore.entries())) {
     if (now > value.resetTime) {
       memoryStore.delete(key);
     }

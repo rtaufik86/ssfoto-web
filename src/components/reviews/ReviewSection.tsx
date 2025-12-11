@@ -77,7 +77,7 @@ export default function ReviewSection({
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
@@ -90,33 +90,32 @@ export default function ReviewSection({
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-          
+
           {/* ═════════════════════════════════════════════════════════════ */}
           {/* LEFT: Review Summary (Sticky) */}
           {/* ═════════════════════════════════════════════════════════════ */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100">
-              
+
               {/* Average Rating */}
               <div className="text-center mb-6 pb-6 border-b border-gray-200">
                 <div className="text-6xl font-bold text-gray-900 mb-2">
                   {averageRating.toFixed(1)}
                 </div>
-                
+
                 {/* Stars */}
                 <div className="flex items-center justify-center gap-1 mb-3">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star
                       key={star}
-                      className={`w-6 h-6 ${
-                        star <= Math.round(averageRating)
+                      className={`w-6 h-6 ${star <= Math.round(averageRating)
                           ? 'fill-amber-400 text-amber-400'
                           : 'text-gray-300'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-600 font-medium">
                   Berdasarkan {totalReviews.toLocaleString('id-ID')}+ ulasan
                 </p>
@@ -127,23 +126,22 @@ export default function ReviewSection({
                 {[5, 4, 3, 2, 1].map((rating) => {
                   const count = ratingDistribution[rating as keyof typeof ratingDistribution];
                   const percentage = getPercentage(count);
-                  
+
                   return (
                     <button
                       key={rating}
                       onClick={() => setFilterRating(filterRating === rating ? 'all' : rating)}
-                      className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors ${
-                        filterRating === rating
+                      className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors ${filterRating === rating
                           ? 'bg-red-50 ring-2 ring-[#ea2423]'
                           : 'hover:bg-gray-100'
-                      }`}
+                        }`}
                     >
                       {/* Star Label */}
                       <div className="flex items-center gap-1 min-w-[60px]">
                         <span className="text-sm font-medium text-gray-700">{rating}</span>
                         <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
                       </div>
-                      
+
                       {/* Progress Bar */}
                       <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div
@@ -151,7 +149,7 @@ export default function ReviewSection({
                           style={{ width: `${percentage}%` }}
                         />
                       </div>
-                      
+
                       {/* Count */}
                       <span className="text-sm text-gray-600 min-w-[40px] text-right">
                         {count}
@@ -177,10 +175,10 @@ export default function ReviewSection({
           {/* RIGHT: Review List */}
           {/* ═════════════════════════════════════════════════════════════ */}
           <div className="lg:col-span-2">
-            
+
             {/* Sorting & Filtering Controls */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-gray-200">
-              
+
               {/* Results Count */}
               <div className="text-gray-600">
                 Menampilkan <span className="font-semibold text-gray-900">{filteredReviews.length}</span> ulasan
@@ -228,13 +226,13 @@ export default function ReviewSection({
                         <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                           {review.userName.charAt(0).toUpperCase()}
                         </div>
-                        
+
                         {/* Name & Date */}
                         <div>
                           <div className="flex items-center gap-2">
                             <p className="font-semibold text-gray-900">{review.userName}</p>
                             {review.verified && (
-                              <CheckCircle className="w-4 h-4 text-green-600" title="Pembelian Terverifikasi" />
+                              <CheckCircle className="w-4 h-4 text-green-600" />
                             )}
                           </div>
                           <p className="text-sm text-gray-500">{review.date}</p>
@@ -246,11 +244,10 @@ export default function ReviewSection({
                         {[1, 2, 3, 4, 5].map((star) => (
                           <Star
                             key={star}
-                            className={`w-4 h-4 ${
-                              star <= review.rating
+                            className={`w-4 h-4 ${star <= review.rating
                                 ? 'fill-amber-400 text-amber-400'
                                 : 'text-gray-300'
-                            }`}
+                              }`}
                           />
                         ))}
                       </div>
@@ -288,7 +285,7 @@ export default function ReviewSection({
                         <ThumbsUp className="w-4 h-4" />
                         <span>Membantu ({review.helpful})</span>
                       </button>
-                      
+
                       {review.verified && (
                         <div className="flex items-center gap-1 text-sm text-green-600">
                           <CheckCircle className="w-4 h-4" />

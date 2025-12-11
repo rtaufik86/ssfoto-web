@@ -13,11 +13,10 @@ const renderStars = (rating: number, size: "sm" | "md" | "lg" = "md") => {
       {[1, 2, 3, 4, 5].map((star) => (
         <Star
           key={star}
-          className={`${starSizeClass} ${
-            star <= rating
+          className={`${starSizeClass} ${star <= rating
               ? "fill-yellow-400 text-yellow-400"
               : "text-gray-300"
-          }`}
+            }`}
         />
       ))}
     </div>
@@ -149,7 +148,7 @@ export default function ReviewSection() {
                     ></div>
                   </div>
                   <span className="text-sm text-gray-600 w-8 text-right">
-                    {ratingDistribution[star].toFixed(0)}%
+                    {ratingDistribution[star as keyof typeof ratingDistribution].toFixed(0)}%
                   </span>
                 </div>
               ))}

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
   title: "SS Foto Digital Lab | Cetak Foto Premium Sejak 1986",
   description: "Studio foto profesional dan digital lab terpercaya. Cetak foto kualitas lab, pas foto kilat, photobook premium, custom frame. 5 cabang di Jakarta.",
   keywords: "cetak foto, pas foto, foto studio, photobook, frame foto, digital lab, Jakarta",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +32,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
   return (
     <html lang="id" className={`${inter.variable} ${playfair.variable}`}>
       <body className={`${inter.className} antialiased bg-white text-gray-900 flex flex-col min-h-screen`}>
@@ -38,6 +44,7 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }

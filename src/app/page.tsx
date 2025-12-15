@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: "SS Foto Digital Lab - Studio & Cetak Foto Profesional Jakarta",
   description:
-    "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook. Pesan online, ambil di 5 cabang: Jakarta, Bekasi, Bogor.",
+    "SS Foto Digital Lab: Jasa cetak pas foto kilat & studio. Menggunakan teknologi Silver Halide (tahan 100 tahun). Kunjungi cabang kami di Jakarta, Bogor, & Bekasi.",
   keywords: [
     "Cetak foto jakarta",
     "Studio foto terdekat",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SS Foto Digital Lab - Studio & Cetak Foto Profesional Jakarta",
     description:
-      "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook premium. 5 cabang di Jakarta, Bekasi, dan Bogor.",
+      "Jasa cetak pas foto kilat & studio. Menggunakan teknologi Silver Halide (tahan 100 tahun). Kunjungi cabang kami di Jakarta, Bogor, & Bekasi.",
     type: "website",
     url: "https://ssfoto.co.id",
     siteName: "SS Foto Digital Lab",

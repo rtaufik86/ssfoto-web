@@ -16,15 +16,15 @@ import {
 // ============================================================================
 export const metadata: Metadata = {
   title: "Lokasi Cabang SS Foto - Studio & Cetak Foto Terdekat",
-  description: "Temukan lokasi 5 cabang SS Foto terdekat di Rawamangun, Pondok Pinang, Galaxy, Jatiwaringin, dan Bogor. Buka setiap hari. Cetak foto kilat & studio.",
-  keywords: ["Cetak foto terdekat", "Studio foto Jakarta", "SS Foto", "Cetak pas foto kilat"],
+  description: "Temukan 5 cabang SS Foto di Jakarta (Rawamangun, Pondok Pinang), Bekasi (Galaxy, Jatiwaringin), dan Bogor. Lihat alamat lengkap, jam buka, dan peta lokasi.",
+  keywords: ["Cetak foto terdekat", "Studio foto Jakarta", "SS Foto Bekasi", "SS Foto Bogor", "Cetak pas foto kilat"],
   alternates: {
-    canonical: "/lokasi", // <-- SUDAH BENAR (Sesuai nama folder baru)
+    canonical: "/lokasi",
   },
   openGraph: {
-    title: "Lokasi Cabang SS Foto - Studio & Cetak Foto Terdekat",
-    description: "Cari cabang SS Foto terdekat? Cek alamat dan jam buka 5 cabang kami di Jabodetabek di sini.",
-    url: "https://ssfoto.co.id/lokasi", // <-- SUDAH BENAR
+    title: "Lokasi Cabang SS Foto - 5 Cabang di Jakarta, Bekasi & Bogor",
+    description: "Temukan cabang SS Foto terdekat: Jakarta (Rawamangun, Pondok Pinang), Bekasi (Galaxy, Jatiwaringin), dan Bogor. Buka setiap hari 09.00-21.00 WIB.",
+    url: "https://ssfoto.co.id/lokasi",
     siteName: "SS Foto Digital Lab",
     locale: "id_ID",
     type: "website",
@@ -127,9 +127,8 @@ function BranchCard({
 
   return (
     <article
-      className={`group relative bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 ${
-        branch.featured ? "md:col-span-2 md:row-span-1" : ""
-      }`}
+      className={`group relative bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 ${branch.featured ? "md:col-span-2 md:row-span-1" : ""
+        }`}
     >
       {/* Featured Badge */}
       {branch.featured && (
@@ -144,11 +143,10 @@ function BranchCard({
       >
         {/* Image */}
         <div
-          className={`relative overflow-hidden ${
-            branch.featured
+          className={`relative overflow-hidden ${branch.featured
               ? "md:w-1/2 aspect-[4/3] md:aspect-auto"
               : "aspect-[16/10]"
-          }`}
+            }`}
         >
           <div
             className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"

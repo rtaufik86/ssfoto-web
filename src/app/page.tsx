@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: "SS Foto Digital Lab - Studio & Cetak Foto Profesional Jakarta",
   description:
-    "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook. Pesan online, ambil di 5 cabang (Rawamangun, Bekasi, Bogor, dll).",
+    "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook. Pesan online, ambil di 5 cabang: Jakarta, Bekasi, Bogor.",
   keywords: [
     "Cetak foto jakarta",
     "Studio foto terdekat",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SS Foto Digital Lab - Studio & Cetak Foto Profesional Jakarta",
     description:
-      "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook premium. 5 cabang siap melayani Anda.",
+      "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook premium. 5 cabang di Jakarta, Bekasi, dan Bogor.",
     type: "website",
     url: "https://ssfoto.co.id",
     siteName: "SS Foto Digital Lab",
@@ -75,7 +75,7 @@ function HeroSection() {
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-red-100/40 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text Content */}
@@ -86,8 +86,8 @@ function HeroSection() {
                 <span className="text-[#ea2423]">Semudah Sentuhan Jari.</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
-                Cetak foto kualitas lab profesional. Pesan online, ambil di 5 cabang kami: 
-                <strong>Rawamangun, Pondok Pinang, Jatiwaringin, Galaxy, & Bogor</strong>. 
+                Cetak foto kualitas lab profesional. Pesan online, ambil di 5 cabang kami:
+                <strong>Rawamangun, Pondok Pinang, Jatiwaringin, Galaxy, & Bogor</strong>.
                 Warna akurat, kertas premium, hasil tahan puluhan tahun.
               </p>
             </div>
@@ -144,7 +144,7 @@ function HeroSection() {
               {/* Decorative Frame */}
               <div className="absolute inset-4 border-2 border-white/50 rounded-2xl pointer-events-none" />
             </div>
-            
+
             {/* Floating Badge */}
             <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -531,20 +531,20 @@ function CTASection() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Siap Mengabadikan Momen Berharga?
-          </h2>
-          <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            Unggah foto pertama Anda hari ini. Gratis konsultasi untuk pesanan pertama!
+          Siap Mengabadikan Momen Berharga?
+        </h2>
+        <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          Unggah foto pertama Anda hari ini. Gratis konsultasi untuk pesanan pertama!
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/upload/pas-foto"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-white text-[#ea2423] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
-            >
-              <Upload className="w-5 h-5" />
-              Unggah Foto Sekarang
-            </Link>
+          <Link
+            href="/upload/pas-foto"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-white text-[#ea2423] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
+          >
+            <Upload className="w-5 h-5" />
+            Unggah Foto Sekarang
+          </Link>
           <Link
             href="https://wa.me/628123456789"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"

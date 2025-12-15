@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "Layanan Cetak Foto & Studio Professional - SS Foto Digital Lab",
   description:
-    "Daftar harga cetak pas foto kilat, cetak foto kanvas, frame custom, dan foto studio. Kualitas lab tahan 100 tahun. Tersedia di 5 cabang.",
+    "Daftar harga cetak pas foto kilat, cetak foto kanvas, frame custom, dan foto studio. Kualitas lab tahan 100 tahun. Tersedia di Jakarta, Bekasi, dan Bogor.",
   keywords:
     "cetak foto, pas foto, foto visa, cetak kanvas, frame foto, foto studio, cetak foto lab, harga cetak foto",
   alternates: {
@@ -118,9 +118,8 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
 
   return (
     <article
-      className={`group relative bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
-        product.priority ? "md:col-span-1 lg:row-span-1" : ""
-      }`}
+      className={`group relative bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${product.priority ? "md:col-span-1 lg:row-span-1" : ""
+        }`}
     >
       {/* Tag Badge */}
       {product.tag && (
@@ -293,266 +292,266 @@ export default function LayananPage() {
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-red-50/30 overflow-hidden">
-          {/* Decorative Elements */}
-          <div className="absolute top-20 right-10 w-72 h-72 bg-red-100/40 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl" />
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-red-100/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl" />
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-              <Link href="/" className="hover:text-[#ea2423] transition-colors">
-                Beranda
-              </Link>
-              <span>/</span>
-              <span className="text-gray-900 font-medium">Layanan</span>
-            </nav>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+            <Link href="/" className="hover:text-[#ea2423] transition-colors">
+              Beranda
+            </Link>
+            <span>/</span>
+            <span className="text-gray-900 font-medium">Layanan</span>
+          </nav>
 
-            {/* Header Content */}
-            <div className="max-w-3xl">
-              <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-6">
-                Katalog Produk
-              </span>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Layanan <span className="text-[#ea2423]">Kami</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                Solusi cetak foto profesional untuk kebutuhan administrasi
-                hingga dekorasi rumah. Semua dikerjakan dengan mesin lab
-                berkualitas tinggi.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* USP Bar */}
-        <section className="bg-gray-900 py-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {usps.map((usp, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#ea2423]/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <usp.icon className="w-5 h-5 text-[#ea2423]" />
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">
-                      {usp.title}
-                    </p>
-                    <p className="text-gray-400 text-xs">{usp.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Priority Products */}
-        <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
-                Layanan Unggulan
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
-                Paling Banyak Dipesan
-              </h2>
-            </div>
-
-            <div className="space-y-8">
-              {priorityProducts.map((product) => (
-                <PriorityProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Regular Products Grid */}
-        <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
-                Layanan Lainnya
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
-                Semua Kebutuhan Foto Anda
-              </h2>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 lg:py-20 bg-gradient-to-br from-[#ea2423] to-[#c91f1e] text-white relative overflow-hidden">
-          {/* Decorative */}
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Butuh Bantuan Memilih?
-            </h2>
-            <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Tim kami siap membantu konsultasi gratis untuk kebutuhan cetak
-              foto Anda. Hubungi kami sekarang!
+          {/* Header Content */}
+          <div className="max-w-3xl">
+            <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-6">
+              Katalog Produk
+            </span>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Layanan <span className="text-[#ea2423]">Kami</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+              Solusi cetak foto profesional untuk kebutuhan administrasi
+              hingga dekorasi rumah. Semua dikerjakan dengan mesin lab
+              berkualitas tinggi.
             </p>
+          </div>
+        </div>
+      </section>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://wa.me/6281936444486?text=Halo%20SS%20Foto,%20saya%20ingin%20bertanya%20tentang%20layanan%20cetak%20foto"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-10 py-4 bg-white text-[#ea2423] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
-              >
-                Chat WhatsApp
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <Link
-                href="/lokasi"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
-              >
-                Kunjungi Toko
-              </Link>
+      {/* USP Bar */}
+      <section className="bg-gray-900 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {usps.map((usp, index) => (
+              <div key={index} className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#ea2423]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <usp.icon className="w-5 h-5 text-[#ea2423]" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">
+                    {usp.title}
+                  </p>
+                  <p className="text-gray-400 text-xs">{usp.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Priority Products */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
+              Layanan Unggulan
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+              Paling Banyak Dipesan
+            </h2>
+          </div>
+
+          <div className="space-y-8">
+            {priorityProducts.map((product) => (
+              <PriorityProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Regular Products Grid */}
+      <section className="py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
+              Layanan Lainnya
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900">
+              Semua Kebutuhan Foto Anda
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-[#ea2423] to-[#c91f1e] text-white relative overflow-hidden">
+        {/* Decorative */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            Butuh Bantuan Memilih?
+          </h2>
+          <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+            Tim kami siap membantu konsultasi gratis untuk kebutuhan cetak
+            foto Anda. Hubungi kami sekarang!
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://wa.me/6281936444486?text=Halo%20SS%20Foto,%20saya%20ingin%20bertanya%20tentang%20layanan%20cetak%20foto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-white text-[#ea2423] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
+            >
+              Chat WhatsApp
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <Link
+              href="/lokasi"
+              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+            >
+              Kunjungi Toko
+            </Link>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap items-center justify-center gap-8 mt-12 text-white/70 text-sm">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5" />
+              <span>Konsultasi Gratis</span>
             </div>
-
-            {/* Trust indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-8 mt-12 text-white/70 text-sm">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5" />
-                <span>Konsultasi Gratis</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5" />
-                <span>Tanpa Minimum Order</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5" />
-                <span>5 Cabang Siap Melayani</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5" />
+              <span>Tanpa Minimum Order</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5" />
+              <span>5 Cabang Siap Melayani</span>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Structured Data for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ItemList",
-              name: "Layanan Cetak Foto & Studio - SS Foto",
-              description:
-                "Daftar lengkap layanan cetak foto profesional, pas foto, dan studio di SS Foto Digital Lab",
-              url: "https://ssfoto.co.id/layanan",
-              numberOfItems: 3,
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  item: {
-                    "@type": "Service",
-                    name: "Cetak Pas Foto Kilat & Visa",
-                    description:
-                      "Layanan cetak pas foto standar kedutaan, CPNS, dan BUMN. Ganti background, retouch kulit natural. Siap ditunggu 1 jam.",
-                    provider: {
-                      "@type": "LocalBusiness",
-                      name: "SS Foto Digital Lab",
-                      url: "https://ssfoto.co.id",
-                      telephone: "+6281936444486",
-                      address: {
-                        "@type": "PostalAddress",
-                        addressLocality: "Jakarta",
-                        addressCountry: "ID",
-                      },
-                    },
-                    serviceType: "Pas Foto",
-                    areaServed: "Jakarta, Bekasi, Bogor",
-                    offers: {
-                      "@type": "Offer",
-                      price: "35000",
-                      priceCurrency: "IDR",
-                      availability: "https://schema.org/InStock",
-                      priceValidUntil: "2025-12-31",
-                      url: "https://ssfoto.co.id/layanan/pas-foto",
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Layanan Cetak Foto & Studio - SS Foto",
+            description:
+              "Daftar lengkap layanan cetak foto profesional, pas foto, dan studio di SS Foto Digital Lab",
+            url: "https://ssfoto.co.id/layanan",
+            numberOfItems: 3,
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                item: {
+                  "@type": "Service",
+                  name: "Cetak Pas Foto Kilat & Visa",
+                  description:
+                    "Layanan cetak pas foto standar kedutaan, CPNS, dan BUMN. Ganti background, retouch kulit natural. Siap ditunggu 1 jam.",
+                  provider: {
+                    "@type": "LocalBusiness",
+                    name: "SS Foto Digital Lab",
+                    url: "https://ssfoto.co.id",
+                    telephone: "+6281936444486",
+                    address: {
+                      "@type": "PostalAddress",
+                      addressLocality: "Jakarta",
+                      addressCountry: "ID",
                     },
                   },
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  item: {
-                    "@type": "Service",
-                    name: "Cetak Foto Kanvas & Wall Decor Premium",
-                    description:
-                      "Hiasan dinding premium dengan bahan kanvas asli atau bingkai minimalis dari workshop sendiri. Custom ukuran tersedia.",
-                    provider: {
-                      "@type": "LocalBusiness",
-                      name: "SS Foto Digital Lab",
-                    },
-                    serviceType: "Wall Decor",
-                    offers: {
-                      "@type": "Offer",
-                      price: "150000",
-                      priceCurrency: "IDR",
-                      availability: "https://schema.org/InStock",
-                      priceValidUntil: "2025-12-31",
-                      url: "https://ssfoto.co.id/layanan/wall-decor",
-                    },
+                  serviceType: "Pas Foto",
+                  areaServed: "Jakarta, Bekasi, Bogor",
+                  offers: {
+                    "@type": "Offer",
+                    price: "35000",
+                    priceCurrency: "IDR",
+                    availability: "https://schema.org/InStock",
+                    priceValidUntil: "2025-12-31",
+                    url: "https://ssfoto.co.id/layanan/pas-foto",
                   },
                 },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  item: {
-                    "@type": "Service",
-                    name: "Cetak Foto Lab 4R - 10R",
-                    description:
-                      "Cetak foto dengan mesin Lab Kimia (Silver Halide). Tahan air dan pudar hingga 100 tahun. Bukan inkjet biasa.",
-                    provider: {
-                      "@type": "LocalBusiness",
-                      name: "SS Foto Digital Lab",
-                    },
-                    serviceType: "Photo Printing",
-                    offers: {
-                      "@type": "Offer",
-                      price: "3000",
-                      priceCurrency: "IDR",
-                      availability: "https://schema.org/InStock",
-                      priceValidUntil: "2025-12-31",
-                      url: "https://ssfoto.co.id/layanan/cetak-foto",
-                    },
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                item: {
+                  "@type": "Service",
+                  name: "Cetak Foto Kanvas & Wall Decor Premium",
+                  description:
+                    "Hiasan dinding premium dengan bahan kanvas asli atau bingkai minimalis dari workshop sendiri. Custom ukuran tersedia.",
+                  provider: {
+                    "@type": "LocalBusiness",
+                    name: "SS Foto Digital Lab",
+                  },
+                  serviceType: "Wall Decor",
+                  offers: {
+                    "@type": "Offer",
+                    price: "150000",
+                    priceCurrency: "IDR",
+                    availability: "https://schema.org/InStock",
+                    priceValidUntil: "2025-12-31",
+                    url: "https://ssfoto.co.id/layanan/wall-decor",
                   },
                 },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  item: {
-                    "@type": "Service",
-                    name: "Foto Studio Keluarga Profesional",
-                    description:
-                      "Sesi foto studio untuk wisuda, maternity, dan keluarga besar. Dilengkapi makeup ready dan cetak langsung.",
-                    provider: {
-                      "@type": "LocalBusiness",
-                      name: "SS Foto Digital Lab",
-                    },
-                    serviceType: "Photography Studio",
-                    offers: {
-                      "@type": "Offer",
-                      price: "500000",
-                      priceCurrency: "IDR",
-                      availability: "https://schema.org/PreOrder",
-                      priceValidUntil: "2025-12-31",
-                      url: "https://ssfoto.co.id/layanan/foto-studio",
-                    },
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                item: {
+                  "@type": "Service",
+                  name: "Cetak Foto Lab 4R - 10R",
+                  description:
+                    "Cetak foto dengan mesin Lab Kimia (Silver Halide). Tahan air dan pudar hingga 100 tahun. Bukan inkjet biasa.",
+                  provider: {
+                    "@type": "LocalBusiness",
+                    name: "SS Foto Digital Lab",
+                  },
+                  serviceType: "Photo Printing",
+                  offers: {
+                    "@type": "Offer",
+                    price: "3000",
+                    priceCurrency: "IDR",
+                    availability: "https://schema.org/InStock",
+                    priceValidUntil: "2025-12-31",
+                    url: "https://ssfoto.co.id/layanan/cetak-foto",
                   },
                 },
-              ],
-            }),
-          }}
-        />
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                item: {
+                  "@type": "Service",
+                  name: "Foto Studio Keluarga Profesional",
+                  description:
+                    "Sesi foto studio untuk wisuda, maternity, dan keluarga besar. Dilengkapi makeup ready dan cetak langsung.",
+                  provider: {
+                    "@type": "LocalBusiness",
+                    name: "SS Foto Digital Lab",
+                  },
+                  serviceType: "Photography Studio",
+                  offers: {
+                    "@type": "Offer",
+                    price: "500000",
+                    priceCurrency: "IDR",
+                    availability: "https://schema.org/PreOrder",
+                    priceValidUntil: "2025-12-31",
+                    url: "https://ssfoto.co.id/layanan/foto-studio",
+                  },
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </>
   );
 }

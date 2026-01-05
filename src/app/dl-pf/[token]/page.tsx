@@ -1,6 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import { Download } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -81,12 +80,10 @@ export default async function PasFotoDownloadPage({
           {/* Image Display */}
           <div className="bg-white rounded-2xl shadow-sm p-6 mb-6">
             <div className="relative w-full aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mb-4">
-              <Image
+              <img
                 src={public_url}
                 alt={`Pas Foto - ${customer_name}`}
-                fill
-                className="object-contain"
-                priority
+                className="w-full h-full object-contain"
               />
             </div>
 

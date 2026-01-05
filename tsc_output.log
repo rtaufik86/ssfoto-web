@@ -1,0 +1,3 @@
+src/components/reviews/ReviewSection.tsx(237,79): error TS2322: Type '{ className: string; title: string; }' is not assignable to type 'IntrinsicAttributes & Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>'.
+  Property 'title' does not exist on type 'IntrinsicAttributes & Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>'.
+src/lib/rateLimiter.ts(143,30): error TS2802: Type 'MapIterator<[string, { count: number; resetTime: number; }]>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.

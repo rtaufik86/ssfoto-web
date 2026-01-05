@@ -1,0 +1,59 @@
+Source Page (URL),Source Section,Anchor Text,Target Page (URL),Entity Included,Link Type,Direction,Priority,Status,Last Updated,Notes
+/,Hero,Cetak Pas Foto Kilat,/upload/pas-foto,No,Service,Down,High,Live,2024-12-26,Primary CTA in hero
+/,Hero,Hias Dinding Rumah,/layanan,No,Service,Lateral,Medium,Live,2024-12-26,Secondary CTA
+/,How It Works,Mulai Unggah Sekarang,/upload/pas-foto,No,Service,Down,High,Live,2024-12-26,Section CTA
+/,Locations,Lihat Alamat Lengkap,/lokasi,No,Location,Lateral,Medium,Live,2024-12-26,Location section CTA
+/,Final CTA,Unggah Foto Sekarang,/upload/pas-foto,No,Service,Down,High,Live,2024-12-26,Final conversion CTA
+/,Final CTA,Chat WhatsApp,https://wa.me/628123456789,No,External,N/A,High,Live,2024-12-26,External WhatsApp link
+/homepage-v2,Hero,Cek Harga & Lokasi Terdekat,#lokasi,No,Internal Anchor,Down,Medium,Live,2024-12-26,Anchor link to locations section
+/homepage-v2,Hero,WhatsApp Sekarang,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,External WhatsApp link
+/homepage-v2,Services,Lihat Harga Pas Foto,/layanan/pas-foto,Yes,Service,Down,High,Live,2024-12-26,SSFoto Cetak Pas Foto → service page
+/homepage-v2,Services,Lihat Katalog Kanvas,/layanan/cetak-canvas,Yes,Service,Down,High,Live,2024-12-26,SSFoto Cetak Foto Kanvas → service page
+/homepage-v2,Services,Booking Studio,/layanan,Yes,Service,Down,Medium,Live,2024-12-26,SSFoto Studio Foto → services hub
+/homepage-v2,Services,Lihat Size Chart,/layanan,Yes,Service,Down,Medium,Live,2024-12-26,SSFoto Cetak Foto Pembesaran → services hub
+/homepage-v2,Locations,Lihat Detail Cabang,/lokasi,Yes,Location,Lateral,Medium,Live,2024-12-26,All 5 location cards link here
+/homepage-v2,How It Works,Mulai Order Sekarang,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,External WhatsApp link
+/homepage-v2,Final CTA,WhatsApp SSFoto Sekarang,https://wa.me/6281936444486,Yes,External,N/A,High,Live,2024-12-26,Primary conversion CTA with entity
+/homepage-v2,Final CTA,Cek Lokasi Cabang,#lokasi,Yes,Internal Anchor,Down,Medium,Live,2024-12-26,Anchor link to locations section
+/layanan,Service Grid,[Dynamic Service Name],/layanan/[service-id],No,Service,Down,High,Live,2024-12-26,Dynamic links to service detail pages
+/layanan,Service Cards,Pelajari Lebih Lanjut,/layanan/[service-id],No,Service,Down,High,Live,2024-12-26,CTA on each service card
+/layanan,Breadcrumb,Beranda,/,No,Navigation,Up,Low,Live,2024-12-26,Breadcrumb navigation
+/layanan,Final CTA,Hubungi Kami,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,WhatsApp conversion link
+/layanan,Final CTA,Lihat Lokasi,/lokasi,No,Location,Lateral,Medium,Live,2024-12-26,Location page link
+/layanan/pas-foto,Hero,Pesan Sekarang,/upload/pas-foto,Yes,Service,Down,High,Live,2024-12-26,Primary CTA - SSFoto Cetak Pas Foto
+/layanan/pas-foto,Contact,WhatsApp,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,Contact method
+/layanan/pas-foto,Contact,Email,mailto:pasfoto@ssfoto.co.id,No,External,N/A,Low,Live,2024-12-26,Email contact
+/layanan/pas-foto,Final CTA,Chat WhatsApp,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,Final conversion CTA
+/layanan/pas-foto,Final CTA,Pesan Sekarang,/upload/pas-foto,Yes,Service,Down,High,Live,2024-12-26,Upload flow CTA
+/layanan/pas-foto,Reviews,Pesan Pas Foto Sekarang,/upload/pas-foto,Yes,Service,Down,High,Live,2024-12-26,Post-review conversion CTA
+/layanan/cetak-canvas,Hero,Mulai Desain,/upload/canvas,Yes,Service,Down,High,Live,2024-12-26,Primary CTA - SSFoto Cetak Kanvas
+/layanan/cetak-canvas,Contact,WhatsApp,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,Contact method
+/layanan/cetak-canvas,Contact,Email,mailto:canvas@ssfoto.co.id,No,External,N/A,Low,Live,2024-12-26,Email contact
+/layanan/cetak-canvas,Final CTA,Chat WhatsApp,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,Final conversion CTA
+/layanan/cetak-canvas,Final CTA,Mulai Desain Sekarang,/upload/canvas,Yes,Service,Down,High,Live,2024-12-26,Upload flow CTA
+/layanan/cetak-canvas,Reviews,Pesan Cetak Kanvas Sekarang,/upload/canvas,Yes,Service,Down,High,Live,2024-12-26,Post-review conversion CTA
+/lokasi,Breadcrumb,Beranda,/,No,Navigation,Up,Low,Live,2024-12-26,Breadcrumb navigation
+/lokasi,Branch Cards,Telepon,[Dynamic Phone],No,External,N/A,Medium,Live,2024-12-26,tel: links for each branch
+/lokasi,Branch Cards,Lihat di Maps,[Dynamic Maps URL],No,External,N/A,Medium,Live,2024-12-26,Google Maps links
+/lokasi,Branch Cards,Chat WhatsApp,[Dynamic WhatsApp],No,External,N/A,High,Live,2024-12-26,Branch-specific WhatsApp links
+/lokasi,Final CTA,Mulai Upload,/#upload,No,Internal Anchor,Up,High,Live,2024-12-26,Upload section anchor
+/lokasi,Final CTA,Chat WhatsApp,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,General WhatsApp link
+/tentang-kami,Breadcrumb,Beranda,/,No,Navigation,Up,Low,Live,2024-12-26,Breadcrumb navigation
+/tentang-kami,CTA Section,Lihat Layanan,/layanan,No,Service,Lateral,Medium,Live,2024-12-26,Services hub link
+/tentang-kami,CTA Section,Lihat Lokasi,/lokasi,No,Location,Lateral,Medium,Live,2024-12-26,Locations page link
+/tentang-kami,Final CTA,Lihat Layanan Kami,/layanan,No,Service,Lateral,High,Live,2024-12-26,Services conversion CTA
+/tentang-kami,Final CTA,Kunjungi Cabang,/lokasi,No,Location,Lateral,High,Live,2024-12-26,Location conversion CTA
+/tentang-kami,Final CTA,Hubungi Kami,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,WhatsApp contact
+/kontak,Breadcrumb,Beranda,/,No,Navigation,Up,Low,Live,2024-12-26,Breadcrumb navigation
+/kontak,Contact Methods,[Dynamic Contact],[Dynamic Link],No,External,N/A,High,Live,2024-12-26,WhatsApp/Phone/Email links
+/kontak,Quick Contact,Kirim Pesan WhatsApp,[Dynamic WhatsApp],No,External,N/A,High,Live,2024-12-26,Pre-filled WhatsApp message
+/kontak,Locations,Lihat di Maps,[Dynamic Maps URL],No,External,N/A,Medium,Live,2024-12-26,Branch-specific maps
+/kontak,Final CTA,Lihat Semua Lokasi,/lokasi,No,Location,Lateral,Medium,Live,2024-12-26,Full locations page
+/kontak,Final CTA,Chat Sekarang,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,WhatsApp conversion
+/upload/pas-foto,Error Page,Hubungi Kami,https://wa.me/6281936444486,No,External,N/A,High,Live,2024-12-26,Error recovery - WhatsApp
+/upload/pas-foto,Error Page,Kembali ke Layanan,/layanan/pas-foto,Yes,Service,Up,Medium,Live,2024-12-26,Error recovery - service page
+/upload/canvas,Footer,Kembali ke Layanan,/layanan/cetak-canvas,Yes,Service,Up,Low,Live,2024-12-26,Back to service page link
+/upload/canvas/size,Breadcrumb,Kembali,/upload/canvas,No,Navigation,Up,Low,Live,2024-12-26,Back to upload step 1
+/upload/canvas/size,Checkout,Lanjut ke Checkout,/upload/canvas/checkout,No,Service,Down,High,Live,2024-12-26,Proceed to checkout
+/upload/wall-decor,Customize,Customize Design,/upload/wall-decor/customize,No,Service,Down,High,Live,2024-12-26,Design customization flow
+/upload/wall-decor,Footer,Lihat Layanan Canvas,/layanan/cetak-canvas,Yes,Service,Up,Low,Live,2024-12-26,Related service link

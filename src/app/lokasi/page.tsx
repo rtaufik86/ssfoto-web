@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Star,
   Camera,
+  MessageCircle,
 } from "lucide-react";
 
 // ============================================================================
@@ -56,7 +57,7 @@ const branches = [
     displayName: "SS Foto Pondok Pinang - Cetak Foto Kilat",
     address:
       "Jl. Ciputat Raya, RT.6/RW.2, Pd. Pinang, Kec. Kebayoran Lama, Kota Jakarta Selatan, 12310",
-    phone: "+6281936444486",
+    phone: "+6285772072012",
     mapUrl:
       "https://www.google.com/maps/place/SS+Foto+Pondok+Pinang/@-6.2668148,106.7702563,17z",
     hours: "Senin - Minggu: 09.00 - 20.00 WIB",
@@ -71,7 +72,7 @@ const branches = [
     displayName: "SS Foto Jatiwaringin - Studio Keluarga",
     address:
       "Jl. Raya Jatiwaringin No.344, RW.004, Jaticempaka, Kota Bekasi, Jawa Barat 17411",
-    phone: "+6281936444486",
+    phone: "+6285772072010",
     mapUrl:
       "https://www.google.com/maps/place/SS+Foto+Jatiwaringin/@-6.2619307,106.9083321,17z",
     hours: "Senin - Minggu: 09.00 - 20.00 WIB",
@@ -86,7 +87,7 @@ const branches = [
     displayName: "SS Foto Galaxy - Frame & Photobook",
     address:
       "Jl. Sedap Malam No.183, Jaka Setia, Kec. Bekasi Sel., Kota Bekasi, Jawa Barat 17147",
-    phone: "+6281511029359",
+    phone: "+6285772072011",
     mapUrl:
       "https://www.google.com/maps/place/SS+Foto+Galaxy/@-6.2556449,106.9669859,17z",
     hours: "Senin - Minggu: 09.00 - 20.00 WIB",
@@ -101,7 +102,7 @@ const branches = [
     displayName: "SS Foto Bogor - Lab Cetak Foto",
     address:
       "Jl. Mawar No.63, RT.02/RW.05, Menteng, Kec. Bogor Bar., Kota Bogor, Jawa Barat 16111",
-    phone: "+6281936444486",
+    phone: "+6285772072013",
     mapUrl:
       "https://www.google.com/maps/place/SS+Foto+Bogor/@-6.5893142,106.7849301,17z",
     hours: "Senin - Minggu: 09.00 - 20.00 WIB",
@@ -144,8 +145,8 @@ function BranchCard({
         {/* Image */}
         <div
           className={`relative overflow-hidden ${branch.featured
-              ? "md:w-1/2 aspect-[4/3] md:aspect-auto"
-              : "aspect-[16/10]"
+            ? "md:w-1/2 aspect-[4/3] md:aspect-auto"
+            : "aspect-[16/10]"
             }`}
         >
           <div
@@ -223,8 +224,8 @@ function BranchCard({
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-gray-200 text-gray-700 font-semibold rounded-full hover:border-[#ea2423] hover:text-[#ea2423] transition-all duration-300 text-sm"
             >
-              <Phone className="w-4 h-4" />
-              Hubungi
+              <MessageCircle className="w-4 h-4" />
+              Hubungi via WhatsApp
             </a>
           </div>
         </div>

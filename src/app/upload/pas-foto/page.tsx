@@ -33,13 +33,33 @@ const DELIVERY_METHODS = [
   { id: 'gosend', label: 'Kirim dengan GoSend', description: 'Biaya sesuai jarak' },
 ];
 
-// Branch options (Same as Canvas)
+// Branch options with WhatsApp numbers
 const BRANCH_OPTIONS = [
-  { id: 'rawamangun', label: 'Rawamangun - Jakarta Timur' },
-  { id: 'pondok-pinang', label: 'Pondok Pinang - Jakarta Selatan' },
-  { id: 'bogor', label: 'Bogor' },
-  { id: 'galaxy-bekasi', label: 'Galaxy - Bekasi' },
-  { id: 'jatiwaringin-bekasi', label: 'Jatiwaringin - Bekasi' },
+  {
+    id: 'rawamangun',
+    label: 'Rawamangun - Jakarta Timur',
+    whatsapp: '6281936444486'
+  },
+  {
+    id: 'pondok-pinang',
+    label: 'Pondok Pinang - Jakarta Selatan',
+    whatsapp: '6285772072012'
+  },
+  {
+    id: 'bogor',
+    label: 'Bogor',
+    whatsapp: '6285772072013'
+  },
+  {
+    id: 'galaxy-bekasi',
+    label: 'Galaxy - Bekasi',
+    whatsapp: '6285772072011'
+  },
+  {
+    id: 'jatiwaringin-bekasi',
+    label: 'Jatiwaringin - Bekasi',
+    whatsapp: '6285772072010'
+  },
 ];
 
 export default function PasFotoUploadPage() {
@@ -50,12 +70,15 @@ export default function PasFotoUploadPage() {
   const [quantity, setQuantity] = useState<Quantity>(4);
   const [customerName, setCustomerName] = useState("");
   const [customerWhatsApp, setCustomerWhatsApp] = useState("");
-  
+
   // NEW: Delivery options state
   const [deliveryMethod, setDeliveryMethod] = useState<string>('pickup');
   const [pickupBranch, setPickupBranch] = useState<string>('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
-  
+  const [gosendSenderBranch, setGosendSenderBranch] = useState<string>(''); // Branch that will send via GoSend
+
+
+
   const [isUploading, setIsUploading] = useState(false);
 
   // Calculate total price
@@ -86,7 +109,7 @@ export default function PasFotoUploadPage() {
       alert("Silakan isi nomor WhatsApp Anda");
       return;
     }
-    
+
     // Client-side WhatsApp validation
     const whatsappDigits = customerWhatsApp.replace(/[^0-9]/g, '');
     if (whatsappDigits.length < 10 || whatsappDigits.length > 16) {
@@ -97,7 +120,7 @@ export default function PasFotoUploadPage() {
       alert("Nomor WhatsApp harus dimulai dengan 0 (contoh: 08123456789) atau 62 (contoh: +628123456789)");
       return;
     }
-    
+
     // NEW: Validate delivery options
     if (deliveryMethod === 'pickup' && !pickupBranch) {
       alert("Silakan pilih cabang untuk pengambilan");
@@ -105,6 +128,10 @@ export default function PasFotoUploadPage() {
     }
     if (deliveryMethod === 'gosend' && !deliveryAddress.trim()) {
       alert("Silakan isi alamat pengiriman lengkap");
+      return;
+    }
+    if (deliveryMethod === 'gosend' && !gosendSenderBranch) {
+      alert("Silakan pilih cabang pengirim untuk GoSend");
       return;
     }
 
@@ -163,10 +190,13 @@ export default function PasFotoUploadPage() {
         throw new Error(linkData.error || 'Gagal membuat branded link.');
       }
 
-      // STEP 3: Format delivery info for WhatsApp
+      // STEP 3: Determine target branch and format delivery info
+      const targetBranchId = deliveryMethod === 'pickup' ? pickupBranch : gosendSenderBranch;
+      const targetBranch = BRANCH_OPTIONS.find(b => b.id === targetBranchId);
+
       const deliveryInfo = deliveryMethod === 'pickup'
         ? `🏪 *PENGAMBILAN:*\n• Ambil di Cabang: ${BRANCH_OPTIONS.find(b => b.id === pickupBranch)?.label}`
-        : `🚚 *PENGIRIMAN:*\n• GoSend ke:\n${deliveryAddress}`;
+        : `🚚 *PENGIRIMAN:*\n• Dikirim dari: ${BRANCH_OPTIONS.find(b => b.id === gosendSenderBranch)?.label}\n• GoSend ke:\n${deliveryAddress}`;
 
       // STEP 4: Generate WhatsApp message with BRANDED LINK & DELIVERY INFO
       const message = `Halo SS Foto, Order Baru! 🚀
@@ -189,7 +219,8 @@ ${linkData.brandedLink}
 
 Mohon proses pesanan ini. Terima kasih! 🙏`;
 
-      const whatsappNumber = "6281936444486";
+      // STEP 5: Get WhatsApp number for the target branch
+      const whatsappNumber = targetBranch?.whatsapp || "6281936444486";
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
       // STEP 5: Open WhatsApp
@@ -209,7 +240,9 @@ Mohon proses pesanan ini. Terima kasih! 🙏`;
       setDeliveryMethod("pickup");
       setPickupBranch("");
       setDeliveryAddress("");
-      
+      setGosendSenderBranch("");
+
+
     } catch (error: any) {
       console.error("Upload Error:", error);
       alert(error.message || "Terjadi kesalahan. Silakan coba lagi.");
@@ -302,11 +335,10 @@ Mohon proses pesanan ini. Terima kasih! 🙏`;
                   key={option.id}
                   type="button"
                   onClick={() => setBackground(option.id)}
-                  className={`relative p-4 rounded-xl border-2 transition-all ${
-                    background === option.id
-                      ? "border-[#ea2423] bg-red-50"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
+                  className={`relative p-4 rounded-xl border-2 transition-all ${background === option.id
+                    ? "border-[#ea2423] bg-red-50"
+                    : "border-gray-200 hover:border-gray-300"
+                    }`}
                 >
                   <div
                     className={`w-12 h-12 rounded-lg mx-auto mb-2 ${option.color}`}
@@ -335,11 +367,10 @@ Mohon proses pesanan ini. Terima kasih! 🙏`;
                   key={option.id}
                   type="button"
                   onClick={() => setSize(option.id)}
-                  className={`relative p-4 rounded-xl border-2 transition-all ${
-                    size === option.id
-                      ? "border-[#ea2423] bg-red-50"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
+                  className={`relative p-4 rounded-xl border-2 transition-all ${size === option.id
+                    ? "border-[#ea2423] bg-red-50"
+                    : "border-gray-200 hover:border-gray-300"
+                    }`}
                 >
                   <p className="font-semibold text-gray-900">{option.label}</p>
                   {size === option.id && (
@@ -363,11 +394,10 @@ Mohon proses pesanan ini. Terima kasih! 🙏`;
                   key={option.id}
                   type="button"
                   onClick={() => setQuantity(option.id)}
-                  className={`relative p-4 rounded-xl border-2 transition-all ${
-                    quantity === option.id
-                      ? "border-[#ea2423] bg-red-50"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
+                  className={`relative p-4 rounded-xl border-2 transition-all ${quantity === option.id
+                    ? "border-[#ea2423] bg-red-50"
+                    : "border-gray-200 hover:border-gray-300"
+                    }`}
                 >
                   <p className="font-semibold text-gray-900">{option.label}</p>
                   <p className="text-sm text-gray-600">
@@ -497,23 +527,49 @@ Mohon proses pesanan ini. Terima kasih! 🙏`;
             </div>
           )}
 
-          {/* Conditional: Address Input (if gosend) */}
+          {/* Conditional: GoSend Sender Branch + Address Input */}
           {deliveryMethod === 'gosend' && (
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
-                Alamat Pengiriman Lengkap <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                value={deliveryAddress}
-                disabled={isUploading}
-                onChange={(e) => setDeliveryAddress(e.target.value)}
-                placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 02, Kelurahan Menteng, Kecamatan Menteng, Jakarta Pusat 10110"
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100"
-              />
-              <p className="text-xs text-gray-500 mt-1">
-                Biaya GoSend akan dikonfirmasi oleh CS berdasarkan jarak
-              </p>
+            <div className="space-y-4">
+              {/* Sender Branch Selection */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Dikirim dari Cabang <span className="text-red-500">*</span>
+                </label>
+                <select
+                  value={gosendSenderBranch}
+                  disabled={isUploading}
+                  onChange={(e) => setGosendSenderBranch(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100"
+                >
+                  <option value="">-- Pilih Cabang Pengirim --</option>
+                  {BRANCH_OPTIONS.map((branch) => (
+                    <option key={branch.id} value={branch.id}>
+                      {branch.label}
+                    </option>
+                  ))}
+                </select>
+                <p className="text-xs text-gray-500 mt-1">
+                  Pilih cabang terdekat untuk meminimalkan biaya GoSend
+                </p>
+              </div>
+
+              {/* Address Input */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Alamat Pengiriman Lengkap <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  value={deliveryAddress}
+                  disabled={isUploading}
+                  onChange={(e) => setDeliveryAddress(e.target.value)}
+                  placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 02, Kelurahan Menteng, Kecamatan Menteng, Jakarta Pusat 10110"
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100"
+                />
+                <p className="text-xs text-gray-500 mt-1">
+                  Biaya GoSend akan dikonfirmasi oleh CS berdasarkan jarak
+                </p>
+              </div>
             </div>
           )}
 
@@ -526,7 +582,7 @@ Mohon proses pesanan ini. Terima kasih! 🙏`;
                   Harga belum termasuk {deliveryMethod === 'gosend' ? 'biaya GoSend' : 'ongkir'}
                 </p>
                 <p className="text-xs text-amber-700 mt-1">
-                  {deliveryMethod === 'pickup' 
+                  {deliveryMethod === 'pickup'
                     ? 'Pengambilan di cabang GRATIS. CS akan konfirmasi waktu siap ambil.'
                     : 'CS akan menginformasikan total biaya termasuk ongkir GoSend setelah pesanan diterima.'}
                 </p>

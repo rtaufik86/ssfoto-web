@@ -29,22 +29,25 @@ export async function GET(request: Request) {
         let rowCount = 0;
 
         // Try canvas_orders table
-        const { count: canvasCount, error: canvasError } = await supabase
+        // Try canvas_orders table
+        const { data: canvasData, error: canvasError } = await supabase
             .from('canvas_orders')
-            .select('*', { count: 'exact', head: true });
+            .select('id')
+            .limit(1);
 
         if (!canvasError) {
             tableUsed = 'canvas_orders';
-            rowCount = canvasCount || 0;
+            rowCount = canvasData?.length || 0;
         } else {
             // Try pas_foto_orders as fallback
-            const { count: pasCount, error: pasError } = await supabase
+            const { data: pasData, error: pasError } = await supabase
                 .from('pas_foto_orders')
-                .select('*', { count: 'exact', head: true });
+                .select('id')
+                .limit(1);
 
             if (!pasError) {
                 tableUsed = 'pas_foto_orders';
-                rowCount = pasCount || 0;
+                rowCount = pasData?.length || 0;
             } else {
                 // If both tables failed, log the error but still return success
                 // because the connection itself keeps the database active

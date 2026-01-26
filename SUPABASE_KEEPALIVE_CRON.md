@@ -4,7 +4,7 @@
 Supabase database pada paket gratis (Free Tier) akan otomatis **pause/mati** jika tidak ada aktivitas selama **7 hari**. Ini menyebabkan website tidak bisa mengakses database sampai database di-resume secara manual.
 
 ## Solusi
-Implementasi cron job yang berjalan setiap **6 hari** untuk memastikan ada aktivitas database secara rutin, sehingga database tidak pernah mati.
+Implementasi cron job yang berjalan **setiap hari** untuk memastikan ada aktivitas database secara rutin, sehingga database tidak pernah mati.
 
 ---
 
@@ -28,7 +28,7 @@ Endpoint ini melakukan:
   "crons": [
     {
       "path": "/api/cron/keep-alive",
-      "schedule": "0 0 */6 * *"
+      "schedule": "0 0 * * *"
     }
   ]
 }
@@ -37,11 +37,11 @@ Endpoint ini melakukan:
 **Schedule Breakdown:**
 - `0` - Menit ke-0
 - `0` - Jam ke-0 (midnight)
-- `*/6` - Setiap 6 hari
+- `*` - Setiap hari
 - `*` - Setiap bulan
 - `*` - Setiap hari dalam seminggu
 
-Artinya: Berjalan setiap **6 hari sekali pada tengah malam UTC**.
+Artinya: Berjalan **setiap hari pada tengah malam UTC**.
 
 ---
 

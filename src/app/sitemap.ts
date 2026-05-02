@@ -8,11 +8,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/pas-foto',
         '/cetak-foto',
         '/cetak-canvas',
+        '/studio-foto',
         '/lokasi',
         '/tentang-kami',
         '/kontak',
         '/pas-foto/rawamangun',
         '/cetak-foto/rawamangun',
+        '/cetak-foto-4r',
+        '/cetak-foto-5r',
+        '/cetak-foto-10r',
     ]
 
     return urls.map((path) => ({

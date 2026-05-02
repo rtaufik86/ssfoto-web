@@ -56,7 +56,7 @@ const products = [
   },
   {
     id: "cetak-canvas",
-    name: "Premium Canvas",
+    name: "Premium Kanvas",
     description:
       "Ubah foto HP menjadi karya seni galeri. Kanvas asli dengan bingkai kayu premium. Garansi 100 tahun.",
     price: "Mulai Rp 250.000",
@@ -185,7 +185,7 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
 
         {/* CTA Button */}
         <Link
-          href={`/layanan/${product.id}`}
+          href={`/${product.id}`}
           className="inline-flex items-center gap-2 w-full justify-center px-5 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-[#ea2423] transition-all duration-300 group/btn"
         >
           Lihat Detail
@@ -269,7 +269,7 @@ function PriorityProductCard({ product }: { product: (typeof products)[0] }) {
 
           {/* CTA Button */}
           <Link
-            href={`/layanan/${product.id}`}
+            href={`/${product.id}`}
             className="inline-flex items-center gap-2 w-fit px-8 py-4 bg-[#ea2423] text-white font-semibold rounded-full hover:bg-[#c91f1e] transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-red-500/50 group/btn"
           >
             Lihat Detail & Harga
@@ -475,7 +475,7 @@ export default function LayananPage() {
                     priceCurrency: "IDR",
                     availability: "https://schema.org/InStock",
                     priceValidUntil: "2025-12-31",
-                    url: "https://ssfoto.co.id/layanan/pas-foto",
+                    url: "https://ssfoto.co.id/pas-foto",
                   },
                 },
               },
@@ -498,7 +498,7 @@ export default function LayananPage() {
                     priceCurrency: "IDR",
                     availability: "https://schema.org/InStock",
                     priceValidUntil: "2025-12-31",
-                    url: "https://ssfoto.co.id/layanan/wall-decor",
+                    url: "https://www.ssfoto.co.id/cetak-canvas",
                   },
                 },
               },
@@ -521,13 +521,13 @@ export default function LayananPage() {
                     priceCurrency: "IDR",
                     availability: "https://schema.org/InStock",
                     priceValidUntil: "2025-12-31",
-                    url: "https://ssfoto.co.id/layanan/cetak-foto",
+                    url: "https://ssfoto.co.id/cetak-foto",
                   },
                 },
               },
               {
                 "@type": "ListItem",
-                position: 3,
+                position: 4,
                 item: {
                   "@type": "Service",
                   name: "Foto Studio Keluarga Profesional",
@@ -544,7 +544,7 @@ export default function LayananPage() {
                     priceCurrency: "IDR",
                     availability: "https://schema.org/PreOrder",
                     priceValidUntil: "2025-12-31",
-                    url: "https://ssfoto.co.id/layanan/foto-studio",
+                    url: "https://ssfoto.co.id/studio-foto",
                   },
                 },
               },

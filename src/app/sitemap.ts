@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '',
         '/pas-foto',
         '/cetak-foto',
+        '/cetak-canvas',
         '/lokasi',
         '/tentang-kami',
         '/kontak',

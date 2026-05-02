@@ -5,8 +5,21 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ['/api/', '/dl/', '/dl-pf/'],
+            disallow: [
+                '/api/',
+                '/admin/',
+                '/internal/',
+                '/toko/',
+                '/bis/',
+                '/order/',
+                '/dl/',
+                '/dl-pf/',
+                '/upload/session/',
+                '/upload/private/',
+                '/test/',
+                '/debug/',
+            ],
         },
-        sitemap: 'https://ssfoto.co.id/sitemap.xml',
+        sitemap: 'https://www.ssfoto.co.id/sitemap.xml',
     }
 }

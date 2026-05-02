@@ -2,25 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom base styles */
 @layer base {
-  body {
-    @apply antialiased;
-    cursor: none; /* Hide default cursor for custom cursor */
+  :root {
+    /* ── SS Foto brand tokens ── */
+    --ss-red:        #E30613;
+    --ss-red-600:    #C8050F;
+    --ss-red-700:    #A60410;
+    --ss-red-50:     #FFF1F1;
+    --ss-red-100:    #FFD9D9;
+    --ss-ink:        #111114;
+    --ss-ink-2:      #2A2A30;
+    --ss-text:       #3A3A42;
+    --ss-muted:      #6B6B74;
+    --ss-soft:       #9A9AA3;
+    --ss-line:       #E6E6EA;
+    --ss-line-2:     #EFEFF2;
+    --ss-bg:         #FFFFFF;
+    --ss-warm:       #FBF9F6;
+    --ss-surface:    #F5F5F7;
+    --ss-surface-2:  #F0F0F3;
+    --ss-wa:         #25D366;
+    --ss-wa-600:     #1FB257;
+    --ss-maps:       #1A73E8;
+    --ss-success:    #16A34A;
+    --ss-warning:    #F59E0B;
+
+    /* ── shadcn compatibility (updated to SS Foto values) ── */
+    --background:             0 0% 100%;
+    --foreground:             220 6% 24%;
+    --card:                   0 0% 100%;
+    --card-foreground:        220 6% 24%;
+    --popover:                0 0% 100%;
+    --popover-foreground:     220 6% 24%;
+    --primary:                356 95% 46%;   /* #E30613 */
+    --primary-foreground:     0 0% 100%;
+    --secondary:              240 6% 97%;    /* ss-surface */
+    --secondary-foreground:   220 6% 24%;
+    --muted:                  240 6% 97%;
+    --muted-foreground:       240 3% 42%;    /* ss-muted */
+    --accent:                 240 6% 97%;
+    --accent-foreground:      220 6% 24%;
+    --destructive:            356 95% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --border:                 240 4% 91%;    /* ss-line */
+    --input:                  240 4% 91%;
+    --ring:                   356 95% 46%;   /* ss-red for focus rings */
+    --radius:                 0.75rem;       /* 12px = r-md */
   }
 }
 
-/* Show cursor on input fields for usability */
-input,
-textarea,
-select {
-  cursor: text !important;
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-/* src/app/globals.css */
-/* ... kode CSS lainnya ... */
-
-/* Wajib untuk Custom Cursor */
-body {
-  cursor: none; 
+  body {
+    background-color: var(--ss-bg);
+    color: var(--ss-text);
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.005em;
+  }
 }

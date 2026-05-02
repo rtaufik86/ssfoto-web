@@ -42,7 +42,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`px-4 py-2 font-medium transition-colors duration-200 rounded-lg ${pathname === link.href
-                  ? "text-[#ea2423] bg-red-50"
+                  ? "text-[#E30613] bg-red-50"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                   }`}
               >
@@ -55,7 +55,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/pas-foto"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ea2423] text-white font-semibold rounded-full hover:bg-[#c91f1e] transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E30613] text-white font-semibold rounded-full hover:bg-[#C8050F] transition-all duration-300 shadow-sh-cta hover:scale-105"
             >
               <Upload className="w-4 h-4" />
               Cetak Foto
@@ -86,7 +86,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`block px-4 py-3 font-medium rounded-lg ${pathname === link.href
-                    ? "text-[#ea2423] bg-red-50"
+                    ? "text-[#E30613] bg-red-50"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                     }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -96,7 +96,7 @@ export default function Header() {
               ))}
               <Link
                 href="/pas-foto"
-                className="flex items-center justify-center gap-2 mx-4 mt-4 px-5 py-3 bg-[#ea2423] text-white font-semibold rounded-full"
+                className="flex items-center justify-center gap-2 mx-4 mt-4 px-5 py-3 bg-[#E30613] text-white font-semibold rounded-full hover:bg-[#C8050F] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Upload className="w-4 h-4" />

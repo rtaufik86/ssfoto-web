@@ -46,7 +46,7 @@ export default function Footer() {
                 href="https://www.instagram.com/ssfoto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 hover:bg-[#ea2423] rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-9 h-9 bg-gray-800 hover:bg-[#E30613] rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Instagram SS Foto"
               >
                 <Instagram className="w-4 h-4" />
@@ -55,7 +55,7 @@ export default function Footer() {
                 href="https://www.facebook.com/ssfoto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 hover:bg-[#ea2423] rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-9 h-9 bg-gray-800 hover:bg-[#E30613] rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Facebook SS Foto"
               >
                 <Facebook className="w-4 h-4" />
@@ -102,14 +102,14 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Kontak Kami</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#ea2423] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#E30613] flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400 text-sm leading-relaxed">
                   Jl. Balai Pustaka Timur No.11, Rawamangun, Jakarta Timur
                   13220
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#ea2423] flex-shrink-0" />
+                <Phone className="w-5 h-5 text-[#E30613] flex-shrink-0" />
                 <a
                   href="tel:+6281936444486"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
@@ -118,7 +118,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#ea2423] flex-shrink-0" />
+                <Mail className="w-5 h-5 text-[#E30613] flex-shrink-0" />
                 <a
                   href="mailto:info@ssfoto.co.id"
                   className="text-gray-400 hover:text-white transition-colors text-sm"

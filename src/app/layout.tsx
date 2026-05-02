@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import CustomCursor from "@/components/ui/CustomCursor";
+import LayoutWrapper from "@/components/layout/LayoutWrapper";
+import { GlobalSchema } from "@/components/schema";
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-playfair",
+  variable: "--font-plus-jakarta-sans",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -24,6 +18,13 @@ export const metadata: Metadata = {
   keywords: "cetak foto, pas foto, foto studio, photobook, frame foto, digital lab, Jakarta",
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  openGraph: {
+    images: [{
+      url: "/api/og?title=SS%20Foto%20Digital%20Lab&subtitle=Premium%20Photo%20Printing%20Sejak%201986",
+      width: 1200,
+      height: 630,
+    }],
   },
 };
 
@@ -35,14 +36,12 @@ export default function RootLayout({
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
 
   return (
-    <html lang="id" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} antialiased bg-white text-gray-900 flex flex-col min-h-screen`}>
-        <CustomCursor />
-        <Header />
-        <main className="flex-grow">
+    <html lang="id" className={plusJakartaSans.variable}>
+      <body className={`${plusJakartaSans.className} antialiased bg-white flex flex-col min-h-screen`}>
+        <GlobalSchema />
+        <LayoutWrapper>
           {children}
-        </main>
-        <Footer />
+        </LayoutWrapper>
       </body>
       {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>

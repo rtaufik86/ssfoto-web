@@ -37,8 +37,34 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 // Storage bucket name
 const STORAGE_BUCKET = 'canvas-uploads';
 
-// CS WhatsApp number
-const CS_WHATSAPP = '+6281936444486'; // Nomor CS SS Foto
+// Branch options with WhatsApp numbers
+const BRANCH_OPTIONS = [
+  {
+    id: 'rawamangun',
+    label: 'Rawamangun - Jakarta Timur',
+    whatsapp: '6281936444486'
+  },
+  {
+    id: 'pondok-pinang',
+    label: 'Pondok Pinang - Jakarta Selatan',
+    whatsapp: '6285772072012'
+  },
+  {
+    id: 'bogor',
+    label: 'Bogor',
+    whatsapp: '6285772072013'
+  },
+  {
+    id: 'galaxy-bekasi',
+    label: 'Galaxy - Bekasi',
+    whatsapp: '6285772072011'
+  },
+  {
+    id: 'jatiwaringin-bekasi',
+    label: 'Jatiwaringin - Bekasi',
+    whatsapp: '6285772072010'
+  },
+];
 
 // ═══════════════════════════════════════════════════════════════════════════
 // CONSTANTS & TYPES
@@ -47,6 +73,7 @@ const CS_WHATSAPP = '+6281936444486'; // Nomor CS SS Foto
 // Supported file types
 const ACCEPTED_TYPES = ['image/jpeg', 'image/jpg', 'image/png'];
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB
+const CS_WHATSAPP = '6281936444486';
 
 // Size options with pricing
 const SIZE_OPTIONS = [
@@ -69,15 +96,6 @@ const DELIVERY_METHODS = [
   { id: 'gosend', label: 'Kirim dengan GoSend', description: 'Biaya sesuai jarak' },
 ];
 
-// Branch options (Definitive SS Foto branches)
-const BRANCH_OPTIONS = [
-  { id: 'rawamangun', label: 'Rawamangun - Jakarta Timur' },
-  { id: 'pondok-pinang', label: 'Pondok Pinang - Jakarta Selatan' },
-  { id: 'bogor', label: 'Bogor' },
-  { id: 'galaxy-bekasi', label: 'Galaxy - Bekasi' },
-  { id: 'jatiwaringin-bekasi', label: 'Jatiwaringin - Bekasi' },
-];
-
 // Upload status type
 type UploadStatus = 'idle' | 'uploading' | 'success' | 'error';
 
@@ -93,24 +111,26 @@ export default function CanvasOrderPage() {
   const [selectedOrientation, setSelectedOrientation] = useState<string>('');
   const [customerName, setCustomerName] = useState('');
   const [customerWhatsApp, setCustomerWhatsApp] = useState('');
-  
+
   // NEW: Delivery options state
   const [deliveryMethod, setDeliveryMethod] = useState<string>('pickup');
   const [pickupBranch, setPickupBranch] = useState<string>('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
-  
+  const [gosendSenderBranch, setGosendSenderBranch] = useState<string>(''); // Branch that will send via GoSend
+
+
   // Upload state
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>('idle');
   const [uploadProgress, setUploadProgress] = useState<string>('');
   const [uploadedUrl, setUploadedUrl] = useState<string | null>(null);
   const [uploadError, setUploadError] = useState<string | null>(null);
-  
+
   // UI state
   const [isDragging, setIsDragging] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
-  
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -143,7 +163,7 @@ export default function CanvasOrderPage() {
     setUploadStatus('idle');
     setUploadedUrl(null);
     setUploadError(null);
-    
+
     const validationError = validateFile(selectedFile);
     if (validationError) {
       setError(validationError);
@@ -237,7 +257,7 @@ export default function CanvasOrderPage() {
         errors.whatsapp = 'Nomor WhatsApp tidak valid';
       }
     }
-    
+
     // NEW: Validate delivery options
     if (deliveryMethod === 'pickup' && !pickupBranch) {
       errors.delivery = 'Silakan pilih cabang untuk pickup';
@@ -313,7 +333,7 @@ export default function CanvasOrderPage() {
 
       // Step 4: Upload file to Supabase
       const publicUrl = await uploadToSupabase(file);
-      
+
       // Step 5: Store the uploaded URL
       setUploadedUrl(publicUrl);
       setUploadStatus('success');
@@ -321,12 +341,12 @@ export default function CanvasOrderPage() {
 
       // Step 6: Create branded link via API
       setUploadProgress('Membuat branded link...');
-      
+
       // Get price from selected size
       const sizeOption = SIZE_OPTIONS.find(s => s.id === selectedSize);
       const priceString = sizeOption?.price || 'Rp 350.000';
       const priceNumber = parseInt(priceString.replace(/\D/g, ''));
-      
+
       const linkResponse = await fetch('/api/order-link', {
         method: 'POST',
         headers: {
@@ -388,7 +408,7 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
 
       // Step 10: Encode message for URL
       const encodedMessage = encodeURIComponent(message);
-      
+
       // Step 11: Generate WhatsApp URL
       const whatsappUrl = `https://wa.me/${CS_WHATSAPP.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
 
@@ -412,10 +432,10 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
 
   const selectedSizeDetails = SIZE_OPTIONS.find(s => s.id === selectedSize);
   // Check if delivery options are complete
-  const isDeliveryComplete = deliveryMethod === 'pickup' 
-    ? !!pickupBranch 
+  const isDeliveryComplete = deliveryMethod === 'pickup'
+    ? !!pickupBranch
     : (deliveryMethod === 'gosend' ? !!deliveryAddress.trim() : false);
-  
+
   const isFormComplete = file && selectedSize && selectedOrientation && customerName.trim() && customerWhatsApp.trim() && isDeliveryComplete;
   const isUploading = uploadStatus === 'uploading';
 
@@ -426,18 +446,18 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 px-4">
       <div className="max-w-2xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-[#ea2423] rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             <span>Langkah 1 dari 1: Kirim Pesanan ke CS</span>
           </div>
-          
+
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-3">
             Pesan Kanvas Art: Unggah & Pilih Ukuran
           </h1>
-          
+
           <p className="text-gray-600 max-w-md mx-auto text-sm">
             Lengkapi form di bawah, lalu kirim pesanan langsung ke Customer Service kami via WhatsApp.
           </p>
@@ -445,7 +465,7 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
 
         {/* Main Form Card */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-          
+
           {/* Section 1: Photo Upload */}
           <div className="p-6 border-b border-gray-100">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -462,11 +482,11 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                 onClick={() => fileInputRef.current?.click()}
                 className={`
                   relative border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all duration-200
-                  ${isDragging 
-                    ? 'border-[#ea2423] bg-red-50 scale-[1.02]' 
+                  ${isDragging
+                    ? 'border-[#ea2423] bg-red-50 scale-[1.02]'
                     : formErrors.file
-                    ? 'border-red-400 bg-red-50'
-                    : 'border-gray-300 hover:border-[#ea2423] hover:bg-gray-50'
+                      ? 'border-red-400 bg-red-50'
+                      : 'border-gray-300 hover:border-[#ea2423] hover:bg-gray-50'
                   }
                 `}
               >
@@ -572,8 +592,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                     ${selectedSize === size.id
                       ? 'border-[#ea2423] bg-red-50 ring-2 ring-red-100'
                       : formErrors.size
-                      ? 'border-red-300 hover:border-red-400'
-                      : 'border-gray-200 hover:border-gray-300'
+                        ? 'border-red-300 hover:border-red-400'
+                        : 'border-gray-200 hover:border-gray-300'
                     }
                   `}
                 >
@@ -620,8 +640,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                       ${selectedOrientation === option.id
                         ? 'border-[#ea2423] bg-red-50 ring-2 ring-red-100'
                         : formErrors.orientation
-                        ? 'border-red-300 hover:border-red-400'
-                        : 'border-gray-200 hover:border-gray-300'
+                          ? 'border-red-300 hover:border-red-400'
+                          : 'border-gray-200 hover:border-gray-300'
                       }
                     `}
                   >
@@ -667,9 +687,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                       setFormErrors(prev => ({ ...prev, name: '' }));
                     }}
                     placeholder="Masukkan nama lengkap Anda"
-                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${
-                      formErrors.name ? 'border-red-400' : 'border-gray-300'
-                    }`}
+                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${formErrors.name ? 'border-red-400' : 'border-gray-300'
+                      }`}
                   />
                 </div>
                 {formErrors.name && (
@@ -693,9 +712,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                       setFormErrors(prev => ({ ...prev, whatsapp: '' }));
                     }}
                     placeholder="Contoh: 08123456789"
-                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${
-                      formErrors.whatsapp ? 'border-red-400' : 'border-gray-300'
-                    }`}
+                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${formErrors.whatsapp ? 'border-red-400' : 'border-gray-300'
+                      }`}
                   />
                 </div>
                 {formErrors.whatsapp && (
@@ -769,9 +787,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                     setPickupBranch(e.target.value);
                     setFormErrors(prev => ({ ...prev, delivery: '' }));
                   }}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${
-                    formErrors.delivery ? 'border-red-400' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${formErrors.delivery ? 'border-red-400' : 'border-gray-300'
+                    }`}
                 >
                   <option value="">-- Pilih Cabang --</option>
                   {BRANCH_OPTIONS.map((branch) => (
@@ -804,9 +821,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                   }}
                   placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 02, Kelurahan Menteng, Kecamatan Menteng, Jakarta Pusat 10110"
                   rows={4}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${
-                    formErrors.delivery ? 'border-red-400' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea2423] focus:border-transparent disabled:bg-gray-100 ${formErrors.delivery ? 'border-red-400' : 'border-gray-300'
+                    }`}
                 />
                 {formErrors.delivery && deliveryMethod === 'gosend' && (
                   <p className="text-sm text-red-600 mt-1">{formErrors.delivery}</p>
@@ -827,7 +843,7 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
                   PERHATIAN: Harga yang tertera <span className="text-red-600">belum termasuk biaya {deliveryMethod === 'gosend' ? 'GoSend' : 'pengiriman (ongkir)'}</span>.
                 </p>
                 <p className="text-sm text-amber-700 mt-1">
-                  {deliveryMethod === 'pickup' 
+                  {deliveryMethod === 'pickup'
                     ? 'Pengambilan di cabang GRATIS. CS akan konfirmasi waktu siap ambil.'
                     : 'CS akan menginformasikan total biaya termasuk ongkir GoSend setelah pesanan diterima.'}
                 </p>
@@ -949,8 +965,8 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
 
         {/* Back Link */}
         <div className="mt-8 text-center">
-          <Link 
-            href="/layanan/cetak-canvas"
+          <Link
+            href="/cetak-kanvas"
             className="text-sm text-gray-500 hover:text-[#ea2423] transition-colors"
           >
             ← Kembali ke halaman produk

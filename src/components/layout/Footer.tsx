@@ -7,16 +7,16 @@ export default function Footer() {
 
   const navigationLinks = [
     { label: "Beranda", href: "/" },
-    { label: "Tentang Kami", href: "/tentang-kami" },
     { label: "Lokasi Toko", href: "/lokasi" },
-    { label: "Layanan", href: "/layanan" },
+    { label: "Tentang Kami", href: "/tentang-kami" },
     { label: "Kontak", href: "/kontak" },
   ];
 
   const productLinks = [
-    { label: "Cetak Pas Foto", href: "/layanan" },
-    { label: "Wall Decor & Frame", href: "/layanan" },
-    { label: "Foto Studio", href: "/layanan" },
+    { label: "Cetak Pas Foto", href: "/pas-foto" },
+    { label: "Premium Canvas", href: "/cetak-canvas" },
+    { label: "Cetak Foto Lab", href: "/cetak-foto" },
+    { label: "Foto Studio", href: "/studio-foto" },
   ];
 
   return (

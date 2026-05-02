@@ -22,9 +22,7 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    <html lang="id">
-      <body>
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4">
           <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
             {/* Icon */}
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100 mb-6">
@@ -93,9 +91,7 @@ export default function GlobalError({
               </details>
             )}
           </div>
-        </div>
-      </body>
-    </html>
+    </div>
   );
 }
 

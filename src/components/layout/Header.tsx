@@ -8,10 +8,11 @@ import { Upload, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Beranda" },
-  { href: "/layanan", label: "Layanan" },
-  { href: "/lokasi", label: "Lokasi Toko" },
-  { href: "/tentang-kami", label: "Tentang Kami" },
-  { href: "/kontak", label: "Kontak" },
+  { href: "/pas-foto", label: "Pas Foto" },
+  { href: "/cetak-foto", label: "Cetak Foto" },
+  { href: "/cetak-canvas", label: "Cetak Canvas" },
+  { href: "/studio-foto", label: "Studio Foto" },
+  { href: "/lokasi", label: "Lokasi" },
 ];
 
 export default function Header() {
@@ -40,11 +41,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 font-medium transition-colors duration-200 rounded-lg ${
-                  pathname === link.href
-                    ? "text-[#ea2423] bg-red-50"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                }`}
+                className={`px-4 py-2 font-medium transition-colors duration-200 rounded-lg ${pathname === link.href
+                  ? "text-[#ea2423] bg-red-50"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -54,11 +54,11 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="/upload/pas-foto"
+              href="/pas-foto"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ea2423] text-white font-semibold rounded-full hover:bg-[#c91f1e] transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105"
             >
               <Upload className="w-4 h-4" />
-              Unggah Foto
+              Cetak Foto
             </Link>
           </div>
 
@@ -85,23 +85,22 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-4 py-3 font-medium rounded-lg ${
-                    pathname === link.href
-                      ? "text-[#ea2423] bg-red-50"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                  }`}
+                  className={`block px-4 py-3 font-medium rounded-lg ${pathname === link.href
+                    ? "text-[#ea2423] bg-red-50"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
-                href="/upload/pas-foto"
+                href="/pas-foto"
                 className="flex items-center justify-center gap-2 mx-4 mt-4 px-5 py-3 bg-[#ea2423] text-white font-semibold rounded-full"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Upload className="w-4 h-4" />
-                Unggah Foto
+                Cetak Foto
               </Link>
             </div>
           </nav>

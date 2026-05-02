@@ -145,25 +145,9 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} SS Foto Digital Lab. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6 text-sm">
-              <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Kebijakan Privasi
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Syarat & Ketentuan
-              </Link>
-            </div>
-          </div>
+          <p className="text-gray-400 text-sm text-center md:text-left">
+            © {currentYear} SS Foto Digital Lab. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

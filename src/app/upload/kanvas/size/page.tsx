@@ -92,7 +92,7 @@ export default function CanvasSizePage() {
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between text-sm">
             <Link 
-              href="/upload/canvas"
+              href="/upload/kanvas"
               className="flex items-center gap-2 text-gray-500 hover:text-[#ea2423] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -276,7 +276,7 @@ export default function CanvasSizePage() {
             {/* CTA Button */}
             {selectedSize ? (
               <Link
-                href="/upload/canvas/checkout"
+                href="/upload/kanvas"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#ea2423] text-white font-bold rounded-xl hover:bg-red-600 transition-colors shadow-lg shadow-red-500/25"
               >
                 Lanjutkan ke Checkout & Pesan

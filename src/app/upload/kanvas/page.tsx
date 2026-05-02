@@ -966,7 +966,7 @@ Mohon konfirmasi ketersediaan dan estimasi pengerjaan. Terima kasih! 🙏`;
         {/* Back Link */}
         <div className="mt-8 text-center">
           <Link
-            href="/cetak-kanvas"
+            href="/cetak-canvas"
             className="text-sm text-gray-500 hover:text-[#ea2423] transition-colors"
           >
             ← Kembali ke halaman produk

@@ -1,0 +1,301 @@
+SSFOTO_DOCUMENT_INDEX.md
+
+Version: 1.0
+Status: Governance Document
+Purpose: Document Navigation & Authority Map
+
+1. Document Purpose
+
+Dokumen ini berfungsi sebagai index dan hierarchy untuk seluruh dokumen SEO dalam proyek SS Foto.
+
+Tujuan:
+
+memberikan panduan navigasi dokumen
+
+menentukan dokumen mana yang authoritative
+
+menghindari konflik instruksi antar dokumen
+
+membantu LLM dan developer memahami sistem
+
+Semua model AI dan developer harus membaca dokumen ini terlebih dahulu sebelum menggunakan dokumen lain.
+
+2. Document Classification System
+
+Dokumen dalam proyek dibagi menjadi tiga kategori:
+
+CORE DOCUMENTS
+
+Dokumen inti yang menentukan strategi SEO utama.
+
+Karakteristik:
+
+authoritative
+strategic
+tidak boleh diubah tanpa approval
+
+Dokumen ini menjadi referensi utama untuk:
+
+GPT
+Claude
+Gemini
+Developer
+SYSTEM DOCUMENTS
+
+Dokumen operasional yang menjelaskan implementasi teknis.
+
+Karakteristik:
+
+digunakan oleh developer
+menjelaskan struktur dan implementasi
+tidak mengubah strategi utama
+REFERENCE DOCUMENTS
+
+Dokumen tambahan yang berisi penjelasan detail atau konteks tambahan.
+
+Karakteristik:
+
+informational
+tidak authoritative
+digunakan sebagai referensi
+3. CORE DOCUMENTS
+
+Dokumen berikut adalah fondasi sistem SEO SS Foto.
+
+01_SSFOTO_MASTER_SEO_BLUEPRINT.md
+
+Role:
+
+core SEO philosophy
+entity definition
+service positioning
+
+Digunakan oleh:
+
+GPT
+Claude
+Gemini
+Developer
+
+Authority Level:
+
+SYSTEM LEVEL
+08_SSFOTO_ENTITY_AUTHORITY_ROADMAP.md
+
+Role:
+
+entity authority strategy
+SEO growth stages
+
+Menjelaskan bagaimana SS Foto membangun otoritas sebagai:
+
+photo printing service entity
+
+Authority Level:
+
+SYSTEM LEVEL
+09_SSFOTO_ENTITY_KEYWORD_MAP.md
+
+Role:
+
+keyword architecture
+keyword clusters
+
+Semua halaman SEO harus berasal dari dokumen ini.
+
+Authority Level:
+
+SYSTEM LEVEL
+18_SSFOTO_TOPIC_AUTHORITY_MAP.md
+
+Role:
+
+supporting content topics
+informational SEO
+PR discovery topics
+
+Authority Level:
+
+STRATEGIC
+4. SYSTEM DOCUMENTS
+
+Dokumen berikut menjelaskan implementasi website.
+
+02_SSFOTO_PAGE_BLUEPRINT_LIBRARY.md
+
+Role:
+
+page templates
+content structure
+
+Digunakan oleh:
+
+Claude
+Developer
+
+Authority Level:
+
+EXECUTION
+03_SSFOTO_LOCAL_DOMINATION_MAP.md
+
+Role:
+
+local SEO structure
+location targeting
+
+Authority Level:
+
+EXECUTION
+05_SSFOTO_PROGRAMMATIC_SEO_PLAN.md
+
+Role:
+
+scaling pages
+location page system
+programmatic content
+
+Authority Level:
+
+EXECUTION
+06_SSFOTO_TECHNICAL_SEO_SPEC.md
+
+Role:
+
+schema markup
+metadata rules
+indexing rules
+
+Digunakan oleh:
+
+Developer
+
+Authority Level:
+
+TECHNICAL
+5. GOVERNANCE DOCUMENTS
+
+Dokumen berikut mengatur cara sistem bekerja.
+
+11_SSFOTO_SEO_DECISION_PROTOCOL.md
+
+Role:
+
+decision authority
+AI governance
+
+Menentukan hubungan:
+
+Owner
+GPT
+Claude
+Gemini
+Developer
+
+Authority Level:
+
+GOVERNANCE
+16_SSFOTO_INTERNAL_LINKING_GRAPH.md
+
+Role:
+
+authority flow
+internal linking structure
+
+Authority Level:
+
+SYSTEM
+6. REFERENCE DOCUMENTS
+
+Dokumen berikut berisi informasi tambahan.
+
+04_SSFOTO_IMAGE_SEO_ARCHITECTURE.md
+
+Role:
+
+image optimization
+image metadata
+
+Status:
+
+REFERENCE
+13_SSFOTO_PROGRAMMATIC_LOCATION_PAGE_PLAN.md
+
+Role:
+
+detail implementation of location pages
+
+Status:
+
+REFERENCE
+14_SSFOTO_SERVICE_PAGE_STANDARD.md
+
+Role:
+
+service page formatting
+copywriting guidance
+
+Status:
+
+REFERENCE
+15_SSFOTO_JABODETABEK_SEO_DOMINATION_MAP.md
+
+Role:
+
+regional SEO strategy
+location targeting
+
+Status:
+
+REFERENCE
+7. Recommended Reading Order
+
+Untuk memahami sistem secara lengkap, baca dokumen dengan urutan berikut:
+
+Step 1 — Strategy
+MASTER_SEO_BLUEPRINT
+ENTITY_AUTHORITY_ROADMAP
+ENTITY_KEYWORD_MAP
+Step 2 — Architecture
+TOPIC_AUTHORITY_MAP
+PAGE_BLUEPRINT_LIBRARY
+LOCAL_DOMINATION_MAP
+Step 3 — Execution
+PROGRAMMATIC_SEO_PLAN
+TECHNICAL_SEO_SPEC
+Step 4 — Governance
+INTERNAL_LINKING_GRAPH
+SEO_DECISION_PROTOCOL
+8. Key Principle
+
+Sistem SEO SS Foto dibangun berdasarkan tiga pilar utama:
+
+ENTITY AUTHORITY
+LOCAL SERVICE DOMINATION
+PROGRAMMATIC CONTENT EXPANSION
+
+Semua halaman, konten, dan optimasi harus memperkuat tiga pilar tersebut.
+
+9. Important Rule for AI Models
+
+Model AI tidak boleh:
+
+mengubah struktur URL
+mengubah keyword map
+mengubah internal linking graph
+
+tanpa persetujuan owner.
+
+Dokumen yang memiliki authority tertinggi adalah:
+
+MASTER_SEO_BLUEPRINT
+ENTITY_AUTHORITY_ROADMAP
+ENTITY_KEYWORD_MAP
+10. Long-Term System Vision
+
+Jika sistem ini dijalankan dengan konsisten, website SS Foto akan berkembang menjadi:
+
+Topical Authority dalam industri cetak foto
+
+dengan fokus wilayah:
+
+Jabodetabek

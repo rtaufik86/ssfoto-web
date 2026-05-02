@@ -35,3 +35,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# token/credential caches
+.dealpos_token_cache.json
+*.token_cache.json
+

@@ -53,6 +53,26 @@ const nextConfig = {
         destination: '/cetak-foto/rawamangun',
         statusCode: 301,
       },
+      {
+        source: '/pas-foto-bekasi',
+        destination: '/lokasi',
+        statusCode: 301,
+      },
+      {
+        source: '/cetak-foto-bekasi',
+        destination: '/lokasi',
+        statusCode: 301,
+      },
+      {
+        source: '/pas-foto-bogor',
+        destination: '/lokasi',
+        statusCode: 301,
+      },
+      {
+        source: '/cetak-foto-bogor',
+        destination: '/lokasi',
+        statusCode: 301,
+      },
     ];
   },
 };

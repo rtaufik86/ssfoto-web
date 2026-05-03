@@ -473,7 +473,7 @@ export default function WallDecorUploadPage() {
               {/* Help Link */}
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link 
-                  href="/layanan/cetak-canvas"
+                  href="/cetak-canvas"
                   className="text-sm text-[#ea2423] font-medium hover:underline flex items-center gap-1"
                 >
                   Lihat detail produk Kanvas

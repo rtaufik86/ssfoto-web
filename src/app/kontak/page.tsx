@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   keywords:
     "kontak ss foto, hubungi ss foto, customer service, whatsapp ss foto, email ss foto, lokasi ss foto",
   alternates: {
-    canonical: "/kontak",
+    canonical: "https://www.ssfoto.co.id/kontak",
   },
   openGraph: {
     title: "Hubungi SS Foto - Layanan Pelanggan & Kerjasama",
     description:
       "Hubungi tim SS Foto untuk pertanyaan seputar cetak foto, keluhan pelanggan, atau kerjasama B2B. Respon cepat via WhatsApp.",
     type: "website",
-    url: "/kontak",
+    url: "https://www.ssfoto.co.id/kontak",
     siteName: "SS Foto Digital Lab",
     locale: "id_ID",
   },
@@ -523,13 +523,13 @@ export default function KontakPage() {
             name: "Hubungi SS Foto",
             description:
               "Halaman kontak SS Foto Digital Lab untuk layanan pelanggan, keluhan, dan kerjasama B2B.",
-            url: "https://ssfoto.co.id/kontak",
+            url: "https://www.ssfoto.co.id/kontak",
             mainEntity: {
               "@type": "Organization",
               name: "SS Foto Digital Lab",
               alternateName: "SS Foto",
-              url: "https://ssfoto.co.id",
-              logo: "https://ssfoto.co.id/logo.png",
+              url: "https://www.ssfoto.co.id",
+              logo: "https://www.ssfoto.co.id/logo.png",
               contactPoint: [
                 {
                   "@type": "ContactPoint",

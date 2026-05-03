@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   description: "Temukan 5 cabang SS Foto di Jakarta (Rawamangun, Pondok Pinang), Bekasi (Galaxy, Jatiwaringin), dan Bogor. Lihat alamat lengkap, jam buka, dan peta lokasi.",
   keywords: ["Cetak foto terdekat", "Studio foto Jakarta", "SS Foto Bekasi", "SS Foto Bogor", "Cetak pas foto kilat"],
   alternates: {
-    canonical: "/lokasi",
+    canonical: "https://www.ssfoto.co.id/lokasi",
   },
   openGraph: {
     title: "Lokasi Cabang SS Foto - 5 Cabang di Jakarta, Bekasi & Bogor",
     description: "Temukan cabang SS Foto terdekat: Jakarta (Rawamangun, Pondok Pinang), Bekasi (Galaxy, Jatiwaringin), dan Bogor. Buka setiap hari 09.00-21.00 WIB.",
-    url: "https://ssfoto.co.id/lokasi",
+    url: "https://www.ssfoto.co.id/lokasi",
     siteName: "SS Foto Digital Lab",
     locale: "id_ID",
     type: "website",
@@ -415,8 +415,8 @@ export default function LocationsPage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "SS Foto",
-            url: "https://ssfoto.id",
-            logo: "https://ssfoto.id/logo.png",
+            url: "https://www.ssfoto.co.id",
+            logo: "https://www.ssfoto.co.id/logo.png",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+62-819-3644-4486",

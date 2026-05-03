@@ -18,6 +18,8 @@ import {
   Star,
   Frame,
   X,
+  Image as ImageIcon,
+  Users,
 } from "lucide-react";
 
 // ============================================================================
@@ -38,19 +40,19 @@ export const metadata: Metadata = {
     "Photobook premium",
   ],
   alternates: {
-    canonical: "https://ssfoto.co.id",
+    canonical: "https://www.ssfoto.co.id",
   },
   openGraph: {
     title: "SS Foto Digital Lab - Studio & Cetak Foto Profesional Jakarta",
     description:
       "Jasa cetak pas foto kilat & studio. Menggunakan teknologi Silver Halide (tahan 100 tahun). Kunjungi cabang kami di Jakarta, Bogor, & Bekasi.",
     type: "website",
-    url: "https://ssfoto.co.id",
+    url: "https://www.ssfoto.co.id",
     siteName: "SS Foto Digital Lab",
     locale: "id_ID",
     images: [
       {
-        url: "https://ssfoto.co.id/og-image.png",
+        url: "https://www.ssfoto.co.id/og-image.png",
         width: 1200,
         height: 630,
         alt: "SS Foto Digital Lab",
@@ -62,7 +64,7 @@ export const metadata: Metadata = {
     title: "SS Foto Digital Lab - Studio & Cetak Foto Profesional Jakarta",
     description:
       "Jasa cetak foto kualitas lab (tahan 100 tahun), pas foto kilat, studio keluarga, dan photobook premium.",
-    images: ["https://ssfoto.co.id/og-image.png"],
+    images: ["https://www.ssfoto.co.id/og-image.png"],
   },
 };
 
@@ -95,7 +97,7 @@ function HeroSection() {
             {/* Dual CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/upload/pas-foto"
+                href="/pas-foto"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#ea2423] text-white font-semibold rounded-full hover:bg-[#c91f1e] transition-all duration-300 shadow-xl shadow-red-500/30 hover:shadow-red-500/50 hover:scale-105"
               >
                 <Camera className="w-5 h-5" />
@@ -103,7 +105,7 @@ function HeroSection() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/layanan"
+                href="/cetak-canvas"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-[#ea2423] hover:text-[#ea2423] transition-all duration-300 hover:scale-105"
               >
                 <Frame className="w-5 h-5" />
@@ -268,28 +270,40 @@ function WhyUsSection() {
 function ProductGrid() {
   const products = [
     {
-      title: "Pas Foto",
-      description: "Untuk dokumen, visa, SKCK, dan keperluan resmi lainnya.",
-      tag: "Siap 1 Jam",
-      tagColor: "bg-green-100 text-green-700",
-      icon: Camera,
+      title: "Cetak Foto Lab",
+      description: "Cetak foto kualitas lab Fujifilm asli. Tahan 100 tahun dan warna akurat.",
+      tag: "Best Quality",
+      tagColor: "bg-blue-100 text-blue-700",
+      icon: ImageIcon,
       gradient: "from-blue-50 to-indigo-50",
+      href: "/cetak-foto",
     },
     {
-      title: "Custom Frame & Wall Decor",
-      description: "Bingkai custom dengan berbagai pilihan material premium.",
+      title: "Pas Foto Kilat",
+      description: "Standar visa & paspor. Ganti background & retouch natural. Jadi dalam 1 jam.",
+      tag: "Populer",
+      tagColor: "bg-green-100 text-green-700",
+      icon: Camera,
+      gradient: "from-green-50 to-emerald-50",
+      href: "/pas-foto",
+    },
+    {
+      title: "Premium Canvas",
+      description: "Bingkai premium dengan material kanvas asli galeri. Garansi tahan pudar.",
       tag: "Workshop Sendiri",
       tagColor: "bg-amber-100 text-amber-700",
       icon: Frame,
       gradient: "from-amber-50 to-orange-50",
+      href: "/cetak-canvas",
     },
     {
       title: "Foto Studio",
-      description: "Studio profesional untuk portrait, keluarga, dan produk.",
-      tag: "Booking Online",
+      description: "Studio profesional untuk keluarga, wisuda, dan maternity.",
+      tag: "Professional",
       tagColor: "bg-red-100 text-red-700",
-      icon: Camera,
+      icon: Users,
       gradient: "from-red-50 to-rose-50",
+      href: "/studio-foto",
     },
   ];
 
@@ -312,8 +326,9 @@ function ProductGrid() {
         {/* Product Grid - 3 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {products.map((product, index) => (
-            <div
+            <Link
               key={index}
+              href={product.href}
               className={`group relative bg-gradient-to-br ${product.gradient} rounded-3xl p-6 border border-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer`}
             >
               {/* Tag */}
@@ -332,10 +347,10 @@ function ProductGrid() {
 
               {/* Arrow */}
               <div className="flex items-center gap-2 text-[#ea2423] font-medium text-sm group-hover:gap-3 transition-all">
-                <span>Pelajari</span>
+                <span>Pelajari Detail</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -412,7 +427,7 @@ function HowItWorks() {
         {/* CTA */}
         <div className="text-center mt-16">
           <Link
-            href="/upload/pas-foto"
+            href="/pas-foto"
             className="inline-flex items-center gap-3 px-10 py-4 bg-[#ea2423] text-white font-semibold rounded-full hover:bg-[#c91f1e] transition-all duration-300 shadow-xl shadow-red-500/30 hover:shadow-red-500/50 hover:scale-105 text-lg"
           >
             <Upload className="w-5 h-5" />
@@ -539,14 +554,14 @@ function CTASection() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href="/upload/pas-foto"
+            href="/pas-foto"
             className="inline-flex items-center gap-3 px-10 py-4 bg-white text-[#ea2423] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
           >
             <Upload className="w-5 h-5" />
             Unggah Foto Sekarang
           </Link>
           <Link
-            href="https://wa.me/628123456789"
+            href="https://wa.me/6281936444486"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
           >
             Chat WhatsApp
@@ -595,17 +610,17 @@ export default function HomePage() {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://ssfoto.co.id/#organization",
+                "@id": "https://www.ssfoto.co.id/#organization",
                 name: "SS Foto Digital Lab",
                 alternateName: "SS Foto",
-                url: "https://ssfoto.co.id",
+                url: "https://www.ssfoto.co.id",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://ssfoto.co.id/logo.png",
+                  url: "https://www.ssfoto.co.id/logo.png",
                   width: 600,
                   height: 60,
                 },
-                image: "https://ssfoto.co.id/og-image.png",
+                image: "https://www.ssfoto.co.id/og-image.png",
                 description:
                   "Studio foto profesional dan digital lab terpercaya sejak 1986. Melayani cetak foto berkualitas tinggi dengan teknologi lab kimia Silver Halide.",
                 foundingDate: "1986",
@@ -657,19 +672,19 @@ export default function HomePage() {
               },
               {
                 "@type": "WebSite",
-                "@id": "https://ssfoto.co.id/#website",
-                url: "https://ssfoto.co.id",
+                "@id": "https://www.ssfoto.co.id/#website",
+                url: "https://www.ssfoto.co.id",
                 name: "SS Foto Official Website",
                 description:
                   "Website resmi SS Foto Digital Lab untuk layanan cetak foto profesional, pas foto, photobook, dan studio keluarga.",
                 publisher: {
-                  "@id": "https://ssfoto.co.id/#organization",
+                  "@id": "https://www.ssfoto.co.id/#organization",
                 },
                 potentialAction: {
                   "@type": "SearchAction",
                   target: {
                     "@type": "EntryPoint",
-                    urlTemplate: "https://ssfoto.co.id/search?q={search_term_string}",
+                    urlTemplate: "https://www.ssfoto.co.id/search?q={search_term_string}",
                   },
                   "query-input": "required name=search_term_string",
                 },

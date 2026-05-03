@@ -21,6 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/pas-foto-3x4',
         '/pas-foto-4x6',
         '/ukuran-pas-foto',
+        '/cetak-foto-6r',
+        '/cetak-foto-8r',
+        '/cetak-foto-a4',
     ]
 
     return urls.map((path) => ({

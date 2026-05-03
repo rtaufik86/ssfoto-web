@@ -21,7 +21,7 @@ export default function CetakFotoRawamangun() {
                 Professional Print: Rawamangun
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Cetak Foto di Rawamangun Jakarta Timur
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
@@ -61,7 +61,7 @@ export default function CetakFotoRawamangun() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg prose-slate max-w-none">
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Cetak Foto Berkualitas di Rawamangun</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cetak Foto Berkualitas di Rawamangun</h2>
             <p className="text-gray-600 mb-6">
               Rawamangun merupakan salah satu kawasan di Jakarta Timur yang memiliki kebutuhan tinggi akan layanan cetak foto, mulai dari kebutuhan pribadi, dokumentasi acara, hingga keperluan profesional. Bagi Anda yang berada di Rawamangun dan sekitarnya, SS Foto hadir sebagai tempat cetak foto terpercaya dengan hasil lab printing profesional.
             </p>
@@ -76,17 +76,17 @@ export default function CetakFotoRawamangun() {
               </p>
             </div>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Area yang Kami Layani</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Area yang Kami Layani</h2>
             <p className="text-gray-600 mb-8">
               Layanan cetak foto SS Foto tidak hanya tersedia untuk pelanggan di Rawamangun, tetapi juga mencakup area sekitar seperti Pulogadung, Kayu Putih, Pisangan Baru, Utan Kayu, dan seluruh wilayah Jakarta Timur. Anda cukup datang langsung ke toko kami atau kirim file foto terlebih dahulu melalui WhatsApp.
             </p>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Cabang SS Foto di Rawamangun</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Cabang SS Foto di Rawamangun</h2>
             <p className="text-gray-600 mb-8">
                Cabang SS Foto di Rawamangun siap melayani kebutuhan cetak foto Anda setiap hari. Lokasi kami strategis dan mudah dijangkau dari berbagai wilayah Jakarta Timur. Untuk informasi lengkap alamat dan jam operasional, kunjungi halaman <Link href="/lokasi" className="text-[#ea2423] font-bold hover:underline italic">lokasi</Link> kami.
             </p>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Ukuran Cetak Foto yang Tersedia</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Ukuran Cetak Foto yang Tersedia</h2>
             <p className="text-gray-600 mb-8">
                SS Foto menyediakan berbagai ukuran <Link href="/cetak-foto" className="text-[#ea2423] font-bold hover:underline italic">cetak foto</Link> untuk berbagai kebutuhan:
             </p>
@@ -105,7 +105,7 @@ export default function CetakFotoRawamangun() {
                 <p className="text-sm text-gray-500">Ukuran medium yang ideal untuk pajangan rumah atau kantor.</p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow">
-                <p className="font-bold text-gray-900 mb-2 font-serif uppercase tracking-widest">Ukuran Besar</p>
+                <p className="font-bold text-gray-900 mb-2 uppercase tracking-widest">Ukuran Besar</p>
                 <p className="text-sm text-gray-500">Melayani cetak ukuran besar untuk display pameran & dekorasi.</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function CetakFotoRawamangun() {
                Semua ukuran dicetak menggunakan kertas foto berkualitas tinggi dengan pilihan finishing glossy maupun matte sesuai preferensi Anda.
             </p>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Cocok untuk Berbagai Kebutuhan</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cocok untuk Berbagai Kebutuhan</h2>
             <ul className="space-y-4 mb-12 list-none p-0">
                {[
                  "Foto kenangan keluarga dan momen pribadi",
@@ -137,7 +137,7 @@ export default function CetakFotoRawamangun() {
 
             {/* FAQ Section */}
             <div className="bg-slate-50 p-10 rounded-[2rem] my-20 border border-slate-100">
-               <h3 className="text-2xl font-serif font-bold mb-8 text-gray-900">FAQ Cetak Foto Rawamangun</h3>
+               <h3 className="text-2xl font-bold mb-8 text-gray-900">FAQ Cetak Foto Rawamangun</h3>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <p className="font-bold text-base mb-2 text-gray-900 underline decoration-red-500 underline-offset-4">Apakah bisa cetak foto di Rawamangun dari HP langsung?</p>
@@ -160,7 +160,7 @@ export default function CetakFotoRawamangun() {
 
             <div className="text-center py-12 bg-gray-900 text-white rounded-[2rem] px-6 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-600 rounded-full blur-[80px] opacity-20" />
-                <h3 className="text-3xl font-serif font-bold mb-4">Cetak Foto Sekarang di SS Foto Rawamangun</h3>
+                <h3 className="text-3xl font-bold mb-4">Cetak Foto Sekarang di SS Foto Rawamangun</h3>
                 <p className="text-gray-400 mb-10 max-w-xl mx-auto">
                    Ingin cetak foto berkualitas di Rawamangun? Kunjungi SS Foto terdekat sekarang untuk layanan cetak foto cepat dan profesional di Jakarta Timur, atau kirim file foto Anda melalui WhatsApp.
                 </p>

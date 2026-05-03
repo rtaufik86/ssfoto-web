@@ -217,7 +217,7 @@ export default function PasFotoPage() {
             </span>
 
             {/* H1 */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-5 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 leading-tight">
               Pas Foto Online —<br />
               <span className="text-[#ea2423]">Upload, Cetak, Ambil di Toko</span>
             </h1>
@@ -368,7 +368,7 @@ export default function PasFotoPage() {
         </div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Cara Pesan Pas Foto Online
             </h2>
             <p className="text-gray-400 text-lg max-w-xl mx-auto">
@@ -411,7 +411,7 @@ export default function PasFotoPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
               Ukuran Pas Foto
             </h2>
             <p className="text-gray-600 text-lg">
@@ -463,7 +463,7 @@ export default function PasFotoPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
               Pas Foto untuk Berbagai Kebutuhan
             </h2>
           </div>
@@ -496,7 +496,7 @@ export default function PasFotoPage() {
         <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-40 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
               Kenapa Pilih SS Foto?
             </h2>
           </div>
@@ -526,7 +526,7 @@ export default function PasFotoPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
               Hasil Cetak Lab SS Foto
             </h2>
             <p className="text-gray-600">
@@ -594,7 +594,7 @@ export default function PasFotoPage() {
 
             {/* Content */}
             <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Jaminan Lolos Aplikasi Online
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
@@ -643,7 +643,7 @@ export default function PasFotoPage() {
           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="py-16 bg-gray-50 border-y border-gray-100">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
             Butuh Pas Foto Langsung?
           </h2>
           <p className="text-gray-600 mb-8">
@@ -688,7 +688,7 @@ export default function PasFotoPage() {
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
               Pertanyaan yang Sering Ditanyakan
             </h2>
             <p className="text-gray-600">
@@ -734,7 +734,7 @@ export default function PasFotoPage() {
             <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-black/10 rounded-full blur-3xl" />
 
             <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
                 Siap Cetak Pas Foto Anda Sekarang?
               </h2>
               <p className="text-white/90 text-lg mb-10">

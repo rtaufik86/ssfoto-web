@@ -43,7 +43,7 @@ export default function CetakFotoContent() {
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                         SSFoto - Cetak Foto Lab Profesional & Tahan 100 Tahun
                     </h1>
 
@@ -85,7 +85,7 @@ export default function CetakFotoContent() {
             {/* Comparison Section */}
             <section className="py-16 md:py-24 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl font-serif font-bold text-center mb-12">Bedanya Cetak Foto di SS Foto vs Tempat Biasa</h2>
+                    <h2 className="text-3xl font-bold text-center mb-12">Bedanya Cetak Foto di SS Foto vs Tempat Biasa</h2>
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
                         <table className="w-full text-left border-collapse">
                             <thead>
@@ -128,7 +128,7 @@ export default function CetakFotoContent() {
             {/* Sizes Grid */}
             <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12">Ukuran Cetak Foto yang Tersedia</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-12">Ukuran Cetak Foto yang Tersedia</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {[
                             { label: "2R", desc: "6 x 9 cm", link: "/cetak-foto-2r" },

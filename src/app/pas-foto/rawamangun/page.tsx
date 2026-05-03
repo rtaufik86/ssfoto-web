@@ -21,7 +21,7 @@ export default function PasFotoRawamangun() {
                 Local Services: Rawamangun
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Pas Foto di Rawamangun Jakarta Timur
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
@@ -61,7 +61,7 @@ export default function PasFotoRawamangun() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg prose-slate max-w-none">
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Layanan Pas Foto Profesional di Rawamangun</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Layanan Pas Foto Profesional di Rawamangun</h2>
             <p className="text-gray-600 mb-6">
               Rawamangun merupakan salah satu kawasan di Jakarta Timur yang memiliki kebutuhan tinggi akan layanan pas foto untuk berbagai keperluan administrasi. Bagi Anda yang berada di Rawamangun dan sekitarnya, SS Foto hadir sebagai pilihan tepat untuk kebutuhan pas foto profesional.
             </p>
@@ -75,17 +75,17 @@ export default function PasFotoRawamangun() {
               </p>
             </div>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Area yang Kami Layani</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Area yang Kami Layani</h2>
             <p className="text-gray-600 mb-8">
               Layanan pas foto SS Foto tidak hanya mencakup Rawamangun, tetapi juga area sekitar seperti Pulogadung, Kayu Putih, Pisangan Baru, Utan Kayu, dan seluruh wilayah Jakarta Timur. Anda yang berada di kawasan tersebut dapat langsung mengunjungi toko kami tanpa perlu reservasi terlebih dahulu.
             </p>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Cabang SS Foto di Rawamangun</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Cabang SS Foto di Rawamangun</h2>
             <p className="text-gray-600 mb-8">
               Cabang SS Foto di Rawamangun berlokasi strategis dan mudah diakses dari berbagai penjuru Jakarta Timur. Toko kami buka setiap hari dan siap melayani kebutuhan pas foto Anda saat itu juga. Untuk informasi lengkap alamat dan jam operasional, kunjungi halaman <Link href="/lokasi" className="text-[#ea2423] font-bold hover:underline italic">lokasi</Link> kami.
             </p>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mt-12 mb-6">Ukuran Pas Foto yang Tersedia</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Ukuran Pas Foto yang Tersedia</h2>
             <p className="text-gray-600 mb-8">
               SS Foto menyediakan berbagai ukuran <Link href="/pas-foto" className="text-[#ea2423] font-bold hover:underline italic">pas foto</Link> sesuai kebutuhan dokumen resmi:
             </p>
@@ -109,7 +109,7 @@ export default function PasFotoRawamangun() {
               Semua ukuran tersedia dengan pilihan latar belakang merah, biru, atau putih sesuai persyaratan dokumen Anda.
             </p>
 
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Cocok untuk Berbagai Kebutuhan</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cocok untuk Berbagai Kebutuhan</h2>
             <ul className="space-y-4 mb-12 list-none p-0">
                {[
                  "Dokumen resmi: KTP, SIM, paspor, akta",
@@ -131,7 +131,7 @@ export default function PasFotoRawamangun() {
 
             {/* FAQ Section */}
             <div className="bg-gray-900 text-white p-10 rounded-[2rem] my-20">
-               <h3 className="text-2xl font-serif font-bold mb-8">FAQ Pas Foto Rawamangun</h3>
+               <h3 className="text-2xl font-bold mb-8">FAQ Pas Foto Rawamangun</h3>
                <div className="space-y-8">
                   <div>
                     <p className="font-bold text-lg mb-2 text-red-400">Apakah bisa pas foto di Rawamangun langsung jadi?</p>
@@ -153,7 +153,7 @@ export default function PasFotoRawamangun() {
             </div>
 
             <div className="text-center py-10 bg-red-50 rounded-3xl border border-red-100 px-6">
-                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">Kunjungi SS Foto Rawamangun Sekarang</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Kunjungi SS Foto Rawamangun Sekarang</h3>
                 <p className="text-gray-600 mb-8 max-w-xl mx-auto">
                     Butuh pas foto cepat dan profesional di Rawamangun? Kunjungi SS Foto terdekat dari Rawamangun sekarang untuk layanan pas foto cepat dan profesional di Jakarta Timur, atau hubungi kami melalui WhatsApp. Lihat lokasi lengkap cabang kami di halaman <Link href="/lokasi" className="text-[#ea2423] font-bold hover:underline italic">lokasi</Link>.
                 </p>

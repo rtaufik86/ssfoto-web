@@ -41,7 +41,7 @@ export default function CetakCanvasContent() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Hidupkan Dinding Rumah dengan Kenangan Terindah
           </h1>
 
@@ -305,7 +305,7 @@ export default function CetakCanvasContent() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Kenapa Memilih Kanvas SS Foto?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -387,7 +387,7 @@ export default function CetakCanvasContent() {
 
             {/* Right: Texture Content */}
             <div className="lg:pr-8">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                 Tekstur Kanvas Asli yang Terasa Premium
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -422,7 +422,7 @@ export default function CetakCanvasContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Gallery Wrap Content (Order reversed on desktop) */}
             <div className="lg:order-first lg:pl-8">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                 Sudut Rapi & Presisi <span className="text-[#ea2423]">&apos;Gallery Wrap&apos;</span>
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -495,7 +495,7 @@ export default function CetakCanvasContent() {
         <div className="max-w-3xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Pertanyaan yang Sering Ditanyakan
             </h2>
             <p className="text-gray-600">
@@ -591,7 +591,7 @@ export default function CetakCanvasContent() {
       {/* CTA Section */}
       <section className="py-16 bg-[#ea2423]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Siap Mencetak Kenangan Anda?
           </h2>
           <p className="text-white/90 text-lg mb-8">

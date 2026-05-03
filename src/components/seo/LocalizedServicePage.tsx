@@ -94,7 +94,7 @@ export default function LocalizedServicePage({
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                         {headline}
                     </h1>
 
@@ -139,7 +139,7 @@ export default function LocalizedServicePage({
                     <div className="max-w-7xl mx-auto px-6">
                         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                             <div className={idx % 2 !== 0 ? 'lg:order-2' : ''}>
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+                                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                                     {section.title}
                                 </h2>
                                 <div className="prose prose-lg text-gray-600 max-w-none">
@@ -170,7 +170,7 @@ export default function LocalizedServicePage({
                 <section className="py-16 md:py-24 bg-gray-900 text-white">
                     <div className="max-w-4xl mx-auto px-6">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">{pricing.title}</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-4">{pricing.title}</h2>
                             <p className="text-gray-400">Harga transparan tanpa biaya tersembunyi</p>
                         </div>
                         <div className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/20">
@@ -204,7 +204,7 @@ export default function LocalizedServicePage({
             {faq && faq.length > 0 && (
                 <section className="py-16 md:py-24 bg-white">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="text-3xl font-serif font-bold text-center mb-12">Pertanyaan Umum (FAQ)</h2>
+                        <h2 className="text-3xl font-bold text-center mb-12">Pertanyaan Umum (FAQ)</h2>
                         <Accordion type="single" collapsible className="w-full">
                             {faq.map((item, idx) => (
                                 <AccordionItem key={idx} value={`item-${idx}`}>
@@ -224,7 +224,7 @@ export default function LocalizedServicePage({
             {/* Final CTA */}
             <section className="py-20 bg-[#ea2423] text-white text-center">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Siap Mendapatkan Hasil Foto Sempurna?</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8">Siap Mendapatkan Hasil Foto Sempurna?</h2>
                     <p className="text-xl mb-10 text-white/90">Kunjungi outlet SS Foto terdekat atau hubungi kami melalui WhatsApp untuk konsultasi gratis.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <Link

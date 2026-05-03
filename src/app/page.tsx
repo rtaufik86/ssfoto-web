@@ -83,7 +83,7 @@ function HeroSection() {
           {/* Left: Text Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Merawat Kenangan Keluarga,{" "}
                 <span className="text-[#ea2423]">Semudah Sentuhan Jari.</span>
               </h1>
@@ -211,7 +211,7 @@ function WhyUsSection() {
           <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
             Kenapa SS Foto?
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Perbedaan yang <span className="text-[#ea2423]">Terlihat</span>
           </h2>
           <p className="text-lg text-gray-600 mb-2">
@@ -240,7 +240,7 @@ function WhyUsSection() {
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
                   <span className="font-semibold text-green-700 text-sm">SS Foto Lab</span>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">{item.ssFoto}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.ssFoto}</h3>
                 <p className="text-gray-600 text-sm">{item.ssFotoDesc}</p>
               </div>
 
@@ -253,7 +253,7 @@ function WhyUsSection() {
                   <X className="w-5 h-5 text-gray-400" />
                   <span className="font-semibold text-gray-500 text-sm">Digital Printing Biasa</span>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-gray-500 mb-2">{item.generic}</h3>
+                <h3 className="text-xl font-bold text-gray-500 mb-2">{item.generic}</h3>
                 <p className="text-gray-400 text-sm">{item.genericDesc}</p>
               </div>
             </div>
@@ -315,7 +315,7 @@ function ProductGrid() {
           <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
             Layanan Kami
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Semua Kebutuhan <span className="text-[#ea2423]">Foto Anda</span>
           </h2>
           <p className="text-lg text-gray-600">
@@ -342,7 +342,7 @@ function ProductGrid() {
               </div>
 
               {/* Content */}
-              <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{product.description}</p>
 
               {/* Arrow */}
@@ -391,7 +391,7 @@ function HowItWorks() {
           <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
             Cara Kerja
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Semudah <span className="text-[#ea2423]">1-2-3</span>
           </h2>
           <p className="text-lg text-gray-600">
@@ -418,7 +418,7 @@ function HowItWorks() {
               </div>
 
               {/* Content */}
-              <h3 className="font-serif text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
               <p className="text-gray-600 max-w-xs mx-auto">{item.description}</p>
             </div>
           ))}
@@ -485,7 +485,7 @@ function LocationsSection() {
           <span className="inline-block px-4 py-1.5 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">
             Lokasi Kami
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             5 Cabang <span className="text-[#ea2423]">Siap Melayani</span>
           </h2>
           <p className="text-lg text-gray-400">
@@ -545,7 +545,7 @@ function CTASection() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
           Siap Mengabadikan Momen Berharga?
         </h2>
         <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">

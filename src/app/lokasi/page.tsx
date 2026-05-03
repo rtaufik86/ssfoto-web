@@ -166,7 +166,7 @@ function BranchCard({
         {/* Content */}
         <div className={`p-6 ${branch.featured ? "md:w-1/2 md:p-8" : ""}`}>
           {/* Branch Name */}
-          <h2 className="font-serif text-xl lg:text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#ea2423] transition-colors">
+          <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#ea2423] transition-colors">
             {branch.name}
           </h2>
 
@@ -257,7 +257,7 @@ export default function LocationsPage() {
               <span className="text-white">Lokasi</span>
             </nav>
 
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Temukan Cabang{" "}
               <span className="text-[#ea2423]">SS Foto Terdekat</span>
             </h1>
@@ -310,7 +310,7 @@ export default function LocationsPage() {
             <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
               Semua Lokasi
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Pilih Cabang Terdekat Anda
             </h2>
             <p className="text-gray-600">
@@ -332,7 +332,7 @@ export default function LocationsPage() {
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Tersedia di Semua Cabang
             </h2>
             <p className="text-gray-600">
@@ -379,7 +379,7 @@ export default function LocationsPage() {
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-[#ea2423] to-[#c91f1e] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Tidak Sempat ke Toko?
           </h2>
           <p className="text-xl text-white/80 mb-8">
@@ -388,7 +388,7 @@ export default function LocationsPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/#upload"
+              href="/pas-foto"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#ea2423] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl"
             >
               Upload Foto Sekarang

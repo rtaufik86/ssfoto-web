@@ -194,7 +194,7 @@ export default function KontakPage() {
               </nav>
 
               {/* Hero Content */}
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 Kami <span className="text-[#ea2423]">Siap Membantu</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
@@ -229,7 +229,7 @@ export default function KontakPage() {
               <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
                 Hubungi Kami
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Pilih Cara <span className="text-[#ea2423]">Terbaik</span> untuk
                 Anda
               </h2>
@@ -260,7 +260,7 @@ export default function KontakPage() {
                     <method.icon className={`w-7 h-7 ${method.color}`} />
                   </div>
 
-                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {method.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -297,7 +297,7 @@ export default function KontakPage() {
               <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
                 Topik Pertanyaan
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Apa yang Bisa <span className="text-[#ea2423]">Kami Bantu?</span>
               </h2>
               <p className="text-gray-600">
@@ -347,7 +347,7 @@ export default function KontakPage() {
                   <div className="w-12 h-12 bg-[#ea2423] rounded-xl flex items-center justify-center">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="font-serif text-2xl font-bold text-gray-900">
+                  <h2 className="text-2xl font-bold text-gray-900">
                     Jam Operasional
                   </h2>
                 </div>
@@ -398,7 +398,7 @@ export default function KontakPage() {
                   <div className="w-12 h-12 bg-[#ea2423] rounded-xl flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="font-serif text-2xl font-bold text-gray-900">
+                  <h2 className="text-2xl font-bold text-gray-900">
                     Lokasi Cabang
                   </h2>
                 </div>
@@ -448,7 +448,7 @@ export default function KontakPage() {
               <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
                 Pertanyaan Umum
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 FAQ <span className="text-[#ea2423]">Seputar Layanan</span>
               </h2>
               <p className="text-gray-600">
@@ -495,7 +495,7 @@ export default function KontakPage() {
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-gradient-to-br from-[#ea2423] to-[#c91f1e] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Masih Ragu?
             </h2>
             <p className="text-xl text-white/80 mb-8">

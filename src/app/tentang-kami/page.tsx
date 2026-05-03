@@ -170,7 +170,7 @@ export default function TentangKamiPage() {
 
             {/* Hero Content */}
             <div className="mb-12">
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
                 Lebih Dari Sekadar{" "}
                 <span className="text-[#ea2423]">Tukang Cetak.</span>
               </h1>
@@ -208,7 +208,7 @@ export default function TentangKamiPage() {
               <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-6">
                 Cerita Kami
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Perjalanan Menjaga{" "}
                 <span className="text-[#ea2423]">Memori Indonesia</span>
               </h2>
@@ -295,7 +295,7 @@ export default function TentangKamiPage() {
             <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
               Timeline
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Perjalanan <span className="text-[#ea2423]">SS Foto</span>
             </h2>
             <p className="text-gray-600">
@@ -326,7 +326,7 @@ export default function TentangKamiPage() {
                         <item.icon className="w-4 h-4" />
                         {item.year}
                       </div>
-                      <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {item.title}
                       </h3>
                       <p className="text-gray-600">{item.description}</p>
@@ -352,7 +352,7 @@ export default function TentangKamiPage() {
             <span className="inline-block px-4 py-1.5 bg-red-50 text-[#ea2423] text-sm font-semibold rounded-full mb-4">
               Nilai Kami
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Prinsip yang <span className="text-[#ea2423]">Kami Pegang</span>
             </h2>
             <p className="text-gray-600">
@@ -372,7 +372,7 @@ export default function TentangKamiPage() {
                 >
                   <value.icon className={`w-7 h-7 ${value.color}`} />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {value.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -391,7 +391,7 @@ export default function TentangKamiPage() {
             <span className="inline-block px-4 py-1.5 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">
               Teknologi Kami
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Kenapa Kami Tetap Gunakan{" "}
               <span className="text-[#ea2423]">Lab Kimia?</span>
             </h2>
@@ -409,7 +409,7 @@ export default function TentangKamiPage() {
                 <div className="w-12 h-12 bg-[#ea2423] rounded-xl flex items-center justify-center mb-6">
                   <Lightbulb className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-3">
+                <h3 className="text-xl font-bold mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
@@ -444,7 +444,7 @@ export default function TentangKamiPage() {
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-red-50 to-amber-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Siap Mempercayakan{" "}
             <span className="text-[#ea2423]">Memori Anda?</span>
           </h2>
